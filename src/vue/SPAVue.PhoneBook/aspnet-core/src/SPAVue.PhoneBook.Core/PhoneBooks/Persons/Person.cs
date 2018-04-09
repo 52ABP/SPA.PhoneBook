@@ -1,13 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
-using System.Text;
-using Abp.Domain.Entities;
 using Abp.Domain.Entities.Auditing;
-using MPACore.PhoneBook.PhoneBooks.PhoneNumbers;
+using SPAVue.PhoneBook.PhoneBooks.PhoneNumbers;
 
-namespace MPACore.PhoneBook.PhoneBooks.Persons
+namespace SPAVue.PhoneBook.PhoneBooks.Persons
 {
     /// <summary>
     /// 人员

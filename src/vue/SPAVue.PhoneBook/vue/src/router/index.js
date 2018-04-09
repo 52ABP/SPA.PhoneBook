@@ -12,9 +12,12 @@ const RouterConfig = {
 };
 
 export const router = new VueRouter(RouterConfig);
+//to 到哪里去
+//from 从哪里来
 
 router.beforeEach((to, from, next) => {
-    iView.LoadingBar.start();
+    debugger;
+    iView.LoadingBar.start();//进度条效果
     Util.title(to.meta.title);
     if (Cookies.get('locking') === '1' && to.name !== 'locking') { // 判断当前是否是锁定状态
         next({
