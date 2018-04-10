@@ -18,7 +18,7 @@ using SPACore.PhoneBook.Users.Dto;
 
 namespace SPACore.PhoneBook.Users
 {
-    [AbpAuthorize(PermissionNames.Pages_Users)]
+    [AbpAuthorize(AppPermissions.Pages_Users)]
     public class UserAppService : AsyncCrudAppService<User, UserDto, long, PagedResultRequestDto, CreateUserDto, UserDto>, IUserAppService
     {
         private readonly UserManager _userManager;
