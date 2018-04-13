@@ -1,5 +1,5 @@
 import { PagedListingComponentBase, PagedRequestDto } from 'shared/paged-listing-component-base';
-import { Component, OnInit, ViewChild,  Injector } from '@angular/core';
+import { Component, OnInit, ViewChild, Injector } from '@angular/core';
 import { appModuleAnimation } from '@shared/animations/routerTransition';
 import { PersonServiceProxy, PersonListDto, PagedResultDtoOfPersonListDto } from '@shared/service-proxies/service-proxies';
 
@@ -23,7 +23,7 @@ export class PersonsComponent extends PagedListingComponentBase<PersonListDto> {
   @ViewChild('editPersonModal') editPersonMosal: EditPersonComponent;
 
 
-persons: PersonListDto[] = [];
+  persons: PersonListDto[] = [];
 
 
 
@@ -41,7 +41,7 @@ persons: PersonListDto[] = [];
   protected list(request: PagedRequestDto, pageNumber: number, finishedCallback: Function): void {
 
     this._personService.
-    getPagedPersons('', 'Id', request.maxResultCount, request.skipCount)
+      getPagedPersons('', 'Id', request.maxResultCount, request.skipCount)
       .finally(() => { finishedCallback(); }).subscribe((result: PagedResultDtoOfPersonListDto) => {
 
       });

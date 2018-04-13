@@ -4,6 +4,7 @@ import { MenuItem } from '@shared/layout/menu-item';
 
 @Component({
     templateUrl: './sidebar-nav.component.html',
+    // tslint:disable-next-line:component-selector
     selector: 'sidebar-nav',
     encapsulation: ViewEncapsulation.None
 })

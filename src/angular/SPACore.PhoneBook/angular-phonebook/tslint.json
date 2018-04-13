@@ -24,6 +24,7 @@
       true,
       140
     ],
+    "align":true,
     "member-access": false,
     "member-ordering": [
       true,
@@ -32,6 +33,7 @@
     ],
     "no-arg": true,
     "no-bitwise": true,
+    
     "no-console": [
       true,
       "debug",
@@ -40,6 +42,7 @@
       "timeEnd",
       "trace"
     ],
+    
     "no-construct": true,
     "no-debugger": true,
     "no-duplicate-variable": true,
