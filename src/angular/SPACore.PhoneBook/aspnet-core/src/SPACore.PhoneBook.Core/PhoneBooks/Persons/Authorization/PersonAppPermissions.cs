@@ -1,6 +1,4 @@
-﻿using SPACore.PhoneBook.PhoneBooks.Persons;
-
-namespace SPACore.PhoneBook.Persons.Authorization
+﻿namespace SPACore.PhoneBook.PhoneBooks.Persons.Authorization
 {
     /// <summary>
     /// 定义系统的权限名称的字符串常量。

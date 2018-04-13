@@ -8,10 +8,9 @@ using Abp.Linq.Extensions;
 
 using System.Linq.Dynamic.Core;
 using Microsoft.EntityFrameworkCore;
-using SPACore.PhoneBook.Persons.Authorization;
 using SPACore.PhoneBook.Persons.Dtos;
-using SPACore.PhoneBook.Persons.DomainServices;
 using SPACore.PhoneBook.PhoneBooks.Persons;
+using SPACore.PhoneBook.PhoneBooks.Persons.Authorization;
 
 namespace SPACore.PhoneBook.Persons
 {
@@ -24,17 +23,15 @@ namespace SPACore.PhoneBook.Persons
         ////BCC/ BEGIN CUSTOM CODE SECTION
         ////ECC/ END CUSTOM CODE SECTION
         private readonly IRepository<Person, int> _personRepository;
-        private readonly IPersonManager _personManager;
 
         /// <summary>
         /// 构造函数
         /// </summary>
         public PersonAppService(IRepository<Person, int> personRepository
-      , IPersonManager personManager
+    
         )
         {
             _personRepository = personRepository;
-            _personManager = personManager;
         }
 
         /// <summary>

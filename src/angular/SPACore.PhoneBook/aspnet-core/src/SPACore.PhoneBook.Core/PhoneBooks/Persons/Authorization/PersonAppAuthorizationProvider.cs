@@ -2,9 +2,8 @@
 using Abp.Authorization;
 using Abp.Localization;
 using SPACore.PhoneBook.Authorization;
-using SPACore.PhoneBook.PhoneBooks.Persons;
 
-namespace SPACore.PhoneBook.Persons.Authorization
+namespace SPACore.PhoneBook.PhoneBooks.Persons.Authorization
 {
     /// <summary>
     /// 权限配置都在这里。

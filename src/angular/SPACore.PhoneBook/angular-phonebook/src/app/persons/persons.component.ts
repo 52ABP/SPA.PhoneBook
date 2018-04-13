@@ -43,6 +43,8 @@ export class PersonsComponent extends PagedListingComponentBase<PersonListDto> {
     this._personService.
       getPagedPersons('', 'Id', request.maxResultCount, request.skipCount)
       .finally(() => { finishedCallback(); }).subscribe((result: PagedResultDtoOfPersonListDto) => {
+        this.persons = result.items;
+        this.showPaging(result, pageNumber);
 
       });
 

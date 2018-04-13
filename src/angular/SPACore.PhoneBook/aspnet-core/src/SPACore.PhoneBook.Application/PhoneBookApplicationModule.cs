@@ -2,7 +2,6 @@
 using Abp.Modules;
 using Abp.Reflection.Extensions;
 using SPACore.PhoneBook.Authorization;
-using SPACore.PhoneBook.Persons.Authorization;
 using SPACore.PhoneBook.Persons.Dtos.LTMAutoMapper;
 
 namespace SPACore.PhoneBook
