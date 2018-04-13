@@ -47,7 +47,7 @@ namespace SPACore.PhoneBook.Persons
             var personCount = await query.CountAsync();
 
             var persons = await query
-                .OrderBy(input.Sorting)
+                .OrderBy(input.Sorting).AsNoTracking()
                 .PageBy(input)
                 .ToListAsync();
 
