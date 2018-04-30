@@ -64,7 +64,7 @@ namespace SPACore.PhoneBook.PhoneBooks.Persons
         /// </summary>
         public async Task<PersonListDto> GetPersonByIdAsync(EntityDto<int> input)
         {
-            var person = await _personRepository.GetAllIncluding(a => a.PhoneNumbers).FirstOrDefaultAsync(a => a.Id == input.Id.Value);
+            var person = await _personRepository.GetAllIncluding(a => a.PhoneNumbers).FirstOrDefaultAsync(a => a.Id == input.Id);
 
             return person.MapTo<PersonListDto>();
         }

@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 using Abp.Application.Services.Dto;
-using SPACore.PhoneBook.PhoneBooks.PhoneNumbers.Dtos;
+using SPACore.PhoneBook.PhoneNumbers.Dtos;
 
 namespace SPACore.PhoneBook.PhoneBooks.Persons.Dtos
 {
