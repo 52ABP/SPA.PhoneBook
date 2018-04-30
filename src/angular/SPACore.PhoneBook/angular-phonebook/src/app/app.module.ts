@@ -36,6 +36,7 @@ import { MaterialInput } from '@shared/directives/material-input.directive';
 import { PersonsComponent } from './persons/persons.component';
 import { EditPersonComponent } from './persons/edit-person/edit-person.component';
 import { CreatePersonComponent } from './persons/create-person/create-person.component';
+import { CreateOrEditPersonModalComponent } from './persons/create-or-edit-person-modal/create-or-edit-person-modal.component';
 
 @NgModule({
     declarations: [
@@ -60,7 +61,8 @@ import { CreatePersonComponent } from './persons/create-person/create-person.com
 
         PersonsComponent,
         EditPersonComponent,
-        CreatePersonComponent
+        CreatePersonComponent,
+        CreateOrEditPersonModalComponent
 
     ],
     imports: [
