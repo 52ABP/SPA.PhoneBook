@@ -1,11 +1,85 @@
-<div bsModal #createOrEditModal="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="createOrEditModal">
+<div bsModal #createOrEditModal="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="createOrEditModal"
+  aria-hidden="true">
 
-  <div class="modal-dialog modal-lg">
+  <div class="modal-dialog ">
     <div class="modal-content">
 
-      <p>
-        create-or-edit-person-modal works!
-      </p>
+
+
+      <form *ngIf="active" id=frm_createOrEditPerson novalidate (ngSubmit)="save()" #personForm="ngForm">
+
+
+        <div class="modal-header">
+          <button type="button" class="close" aria-label="Close" (click)="close()">
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <h4 class="modal-title">
+            <span *ngIf="person.id">{{l("EditEdition")}}: {{person.name}}</span>
+            <span *ngIf="!person.id">{{l("CreateNewPerson")}}</span>
+
+          </h4>
+        </div>
+        <div class="modal-body">
+
+
+
+          <div class="row clearfix">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+              <div class="input-group">
+                <div class="input-group-addon">Name</div>
+
+
+
+                <input type="text" class="form-control" id="exampleInputAmount" placeholder="Amount">
+              </div>
+
+
+            </div>
+          </div>
+
+
+          <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+
+              <div class="input-group">
+                <div class="input-group-addon">EmailAddress</div>
+                <input type="text" class="form-control" id="exampleInputAmount" placeholder="Amount">
+              </div>
+
+
+
+            </div>
+          </div>
+
+
+          <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+              <div class="input-group">
+                <div class="input-group-addon">Address</div>
+                <input type="text" class="form-control" id="exampleInputAmount" placeholder="Amount">
+              </div>
+
+            </div>
+          </div>
+
+
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" (click)="c('Close click')">Close</button>
+        </div>
+
+
+
+        <div>
+
+
+        </div>
+      </form>
+
 
     </div>
 

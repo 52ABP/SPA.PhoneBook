@@ -11,8 +11,10 @@ import { ModalDirective } from 'ngx-bootstrap';
 export class CreateOrEditPersonModalComponent extends AppComponentBase   {
 
 @ViewChild('createOrEditModal') modal: ModalDirective;
-  persons: PersonEditDto = new PersonEditDto();
+  person: PersonEditDto = new PersonEditDto();
   // @Output() modalSave: EventEmitter<any> = new EventEmitter<any>();
+  active = false;
+  saving = false;
 
   constructor(
     injector:     Injector,
@@ -22,13 +24,20 @@ export class CreateOrEditPersonModalComponent extends AppComponentBase   {
   }
 
   show(personId?: number): void {
-
+    this.active = true;
 this._personService.getPersonForEdit(personId).subscribe(personResult => {
-this.persons = personResult.person;
+this.person = personResult.person;
 this.modal.show();
 });
 
   }
+
+  save(): void {}
+
+  close(): void {
+    this.active = false;
+    this.modal.hide();
+}
 
 
 }

@@ -11,8 +11,8 @@ export class CreateRoleComponent extends AppComponentBase implements OnInit {
     @ViewChild('createRoleModal') modal: ModalDirective;
     @ViewChild('modalContent') modalContent: ElementRef;
 
-    active: boolean = false;
-    saving: boolean = false;
+    active = false;
+    saving = false;
 
     permissions: ListResultDtoOfPermissionDto = null;
     role: CreateRoleDto = null;
@@ -45,11 +45,11 @@ export class CreateRoleComponent extends AppComponentBase implements OnInit {
     }
 
     save(): void {
-        var permissions = [];
-        $(this.modalContent.nativeElement).find("[name=permission]").each(
+        const permissions = [];
+        $(this.modalContent.nativeElement).find('[name=permission]').each(
             (index: number, elem: Element) => {
-                if ($(elem).is(":checked")) {
-                    permissions.push(elem.getAttribute("value").valueOf());
+                if ($(elem).is(':checked')) {
+                    permissions.push(elem.getAttribute('value').valueOf());
                 }
             }
         );
