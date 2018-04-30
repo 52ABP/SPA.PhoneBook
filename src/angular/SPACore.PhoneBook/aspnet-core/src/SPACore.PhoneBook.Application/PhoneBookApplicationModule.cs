@@ -4,6 +4,7 @@ using Abp.Reflection.Extensions;
 using SPACore.PhoneBook.Authorization;
 using SPACore.PhoneBook.PhoneBooks.Persons.Authorization;
 using SPACore.PhoneBook.PhoneBooks.Persons.Dtos.LTMAutoMapper;
+using SPACore.PhoneBook.PhoneBooks.PhoneNumbers.Dtos.LTMAutoMapper;
 
 namespace SPACore.PhoneBook
 {
@@ -18,6 +19,7 @@ namespace SPACore.PhoneBook
             Configuration.Authorization.Providers.Add<PersonAppAuthorizationProvider>();
 
             Configuration.Modules.AbpAutoMapper().Configurators.Add(CustomerPersonMapper.CreateMappings);
+            Configuration.Modules.AbpAutoMapper().Configurators.Add(CustomerPhoneNumberMapper.CreateMappings);
 
         }
 

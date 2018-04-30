@@ -1,9 +1,7 @@
 ﻿using System;
 using Abp.Application.Services.Dto;
-using SPACore.PhoneBook.PhoneNumbers.Dtos.LTMAutoMapper;
-using SPACore.PhoneBook.PhoneBooks.PhoneNumbers;
 
-namespace SPACore.PhoneBook.PhoneNumbers.Dtos
+namespace SPACore.PhoneBook.PhoneBooks.PhoneNumbers.Dtos
 {
     public class PhoneNumberListDto : EntityDto<long>
     {

@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using SPACore.PhoneBook.PhoneNumbers.Dtos;
+using SPACore.PhoneBook.PhoneBooks.PhoneNumbers.Dtos;
 
 namespace SPACore.PhoneBook.PhoneBooks.Persons.Dtos
 {

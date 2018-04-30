@@ -66,7 +66,10 @@ namespace SPACore.PhoneBook.PhoneBooks.Persons
         {
             var person = await _personRepository.GetAllIncluding(a => a.PhoneNumbers).FirstOrDefaultAsync(a => a.Id == input.Id);
 
-            return person.MapTo<PersonListDto>();
+       var dto=     ObjectMapper.Map<PersonListDto>(person);
+
+
+            return dto;
         }
 
         /// <summary>
@@ -93,9 +96,9 @@ namespace SPACore.PhoneBook.PhoneBooks.Persons
             {
                 var entity = await _personRepository.GetAllIncluding(a => a.PhoneNumbers).FirstOrDefaultAsync(a => a.Id == input.Id.Value);
 
-                personEditDto = entity.MapTo<PersonEditDto>();
+              //  personEditDto = entity.MapTo<PersonEditDto>();
 
-                //personEditDto = ObjectMapper.Map<List <personEditDto>>(entity);
+                personEditDto = ObjectMapper.Map<PersonEditDto>(entity);
             }
             else
             {
@@ -135,7 +138,10 @@ namespace SPACore.PhoneBook.PhoneBooks.Persons
             var entity = ObjectMapper.Map<Person>(input);
 
             entity = await _personRepository.InsertAsync(entity);
-            return entity.MapTo<PersonEditDto>();
+
+            var dto = ObjectMapper.Map<PersonEditDto>(entity);
+
+            return dto;
         }
 
         /// <summary>
@@ -146,9 +152,10 @@ namespace SPACore.PhoneBook.PhoneBooks.Persons
         {
             //TODO:更新前的逻辑判断，是否允许更新
             var entity = await _personRepository.GetAsync(input.Id.Value);
-            input.MapTo(entity);
+          //  input.MapTo(entity);
 
-          //  ObjectMapper.Map(input, entity);
+         ObjectMapper.Map(input, entity);
+
             await _personRepository.UpdateAsync(entity);
         }
 

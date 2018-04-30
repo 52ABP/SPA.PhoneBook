@@ -1,9 +1,7 @@
-﻿using System.ComponentModel.DataAnnotations;
-using SPACore.PhoneBook.PhoneNumbers.Dtos.LTMAutoMapper;
-using SPACore.PhoneBook.PhoneBooks.PhoneNumbers;
-using System;
+﻿using System;
+using System.ComponentModel.DataAnnotations;
 
-namespace SPACore.PhoneBook.PhoneNumbers.Dtos
+namespace SPACore.PhoneBook.PhoneBooks.PhoneNumbers.Dtos
 {
     public class PhoneNumberEditDto
     {

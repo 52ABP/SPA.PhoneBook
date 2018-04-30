@@ -1,8 +1,6 @@
-﻿using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using SPACore.PhoneBook.PhoneBooks.PhoneNumbers;
+﻿using System.ComponentModel.DataAnnotations;
 
-namespace SPACore.PhoneBook.PhoneNumbers.Dtos
+namespace SPACore.PhoneBook.PhoneBooks.PhoneNumbers.Dtos
 {
     public class CreateOrUpdatePhoneNumberInput
 {
