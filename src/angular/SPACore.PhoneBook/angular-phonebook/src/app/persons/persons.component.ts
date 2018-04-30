@@ -73,4 +73,8 @@ if (isconfirmed) {
     this.createOrEditPersonModal.show();
   }
 
+  editPerson(entity: PersonListDto): void {
+    this.createOrEditPersonModal.show(entity.id);
+  }
+
 }
