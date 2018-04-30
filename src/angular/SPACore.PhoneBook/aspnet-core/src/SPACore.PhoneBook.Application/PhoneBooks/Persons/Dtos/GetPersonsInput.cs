@@ -1,8 +1,7 @@
 ﻿using Abp.Runtime.Validation;
 using SPACore.PhoneBook.Dto;
-using SPACore.PhoneBook.PhoneBooks.Persons;
 
-namespace SPACore.PhoneBook.Persons.Dtos
+namespace SPACore.PhoneBook.PhoneBooks.Persons.Dtos
 {
     public class GetPersonsInput : PagedAndSortedInputDto, IShouldNormalize
     {

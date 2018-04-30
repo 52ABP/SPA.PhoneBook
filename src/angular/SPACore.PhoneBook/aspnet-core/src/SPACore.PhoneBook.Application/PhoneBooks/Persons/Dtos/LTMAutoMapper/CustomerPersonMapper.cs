@@ -1,9 +1,7 @@
 ﻿using AutoMapper;
 
-namespace SPACore.PhoneBook.Persons.Dtos.LTMAutoMapper
+namespace SPACore.PhoneBook.PhoneBooks.Persons.Dtos.LTMAutoMapper
 {
-    using SPACore.PhoneBook.PhoneBooks.Persons;
-
     /// <summary>
     /// 配置Person的AutoMapper
     /// </summary>

@@ -1,18 +1,16 @@
 ﻿using System.Collections.Generic;
+using System.Linq.Dynamic.Core;
 using System.Threading.Tasks;
 using Abp.Application.Services.Dto;
 using Abp.Authorization;
 using Abp.AutoMapper;
 using Abp.Domain.Repositories;
 using Abp.Linq.Extensions;
-
-using System.Linq.Dynamic.Core;
 using Microsoft.EntityFrameworkCore;
-using SPACore.PhoneBook.Persons.Dtos;
-using SPACore.PhoneBook.PhoneBooks.Persons;
 using SPACore.PhoneBook.PhoneBooks.Persons.Authorization;
+using SPACore.PhoneBook.PhoneBooks.Persons.Dtos;
 
-namespace SPACore.PhoneBook.Persons
+namespace SPACore.PhoneBook.PhoneBooks.Persons
 {
     /// <summary>
     /// Person应用层服务的接口实现方法
@@ -42,7 +40,7 @@ namespace SPACore.PhoneBook.Persons
         public async Task<PagedResultDto<PersonListDto>> GetPagedPersons(GetPersonsInput input)
         {
 
-            var query = _personRepository.GetAll();
+            var query = _personRepository.GetAll().Include(a => a.PhoneNumbers);
             //TODO:根据传入的参数添加过滤条件
             var personCount = await query.CountAsync();
 
@@ -66,9 +64,9 @@ namespace SPACore.PhoneBook.Persons
         /// </summary>
         public async Task<PersonListDto> GetPersonByIdAsync(EntityDto<int> input)
         {
-            var entity = await _personRepository.GetAsync(input.Id);
+            var person = await _personRepository.GetAllIncluding(a => a.PhoneNumbers).FirstOrDefaultAsync(a => a.Id == input.Id.Value);
 
-            return entity.MapTo<PersonListDto>();
+            return person.MapTo<PersonListDto>();
         }
 
         /// <summary>
@@ -93,7 +91,7 @@ namespace SPACore.PhoneBook.Persons
 
             if (input.Id.HasValue)
             {
-                var entity = await _personRepository.GetAsync(input.Id.Value);
+                var entity = await _personRepository.GetAllIncluding(a => a.PhoneNumbers).FirstOrDefaultAsync(a => a.Id == input.Id.Value);
 
                 personEditDto = entity.MapTo<PersonEditDto>();
 
@@ -150,7 +148,7 @@ namespace SPACore.PhoneBook.Persons
             var entity = await _personRepository.GetAsync(input.Id.Value);
             input.MapTo(entity);
 
-            // ObjectMapper.Map(input, entity);
+          //  ObjectMapper.Map(input, entity);
             await _personRepository.UpdateAsync(entity);
         }
 

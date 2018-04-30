@@ -1,10 +1,8 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using SPACore.PhoneBook.Persons.Dtos.LTMAutoMapper;
-using SPACore.PhoneBook.PhoneBooks.Persons;
-using SPACore.PhoneBook.PhoneBooks.PhoneNumbers;
+using SPACore.PhoneBook.PhoneBooks.PhoneNumbers.Dtos;
 
-namespace SPACore.PhoneBook.Persons.Dtos
+namespace SPACore.PhoneBook.PhoneBooks.Persons.Dtos
 {
     public class PersonEditDto
     {
@@ -27,6 +25,10 @@ namespace SPACore.PhoneBook.Persons.Dtos
         /// </summary>
         [MaxLength(PhoneBookConsts.MaxAddressLength)]
         public string Address { get; set; }
+
+
+        public List<PhoneNumberEditDto> PhoneNumbers { get; set; }
+
 
     }
 }

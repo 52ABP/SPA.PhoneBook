@@ -2,10 +2,9 @@
 using System.Threading.Tasks;
 using Abp.Application.Services;
 using Abp.Application.Services.Dto;
-using SPACore.PhoneBook.Persons.Dtos;
-using SPACore.PhoneBook.PhoneBooks.Persons;
+using SPACore.PhoneBook.PhoneBooks.Persons.Dtos;
 
-namespace SPACore.PhoneBook.Persons
+namespace SPACore.PhoneBook.PhoneBooks.Persons
 {
     /// <summary>
     /// Person应用层服务的接口方法
