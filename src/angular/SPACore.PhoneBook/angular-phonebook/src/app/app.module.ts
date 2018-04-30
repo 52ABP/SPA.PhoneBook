@@ -34,8 +34,7 @@ import { SideBarFooterComponent } from '@app/layout/sidebar-footer.component';
 import { RightSideBarComponent } from '@app/layout/right-sidebar.component';
 import { MaterialInput } from '@shared/directives/material-input.directive';
 import { PersonsComponent } from './persons/persons.component';
-import { EditPersonComponent } from './persons/edit-person/edit-person.component';
-import { CreatePersonComponent } from './persons/create-person/create-person.component';
+
 import { CreateOrEditPersonModalComponent } from './persons/create-or-edit-person-modal/create-or-edit-person-modal.component';
 
 @NgModule({
@@ -44,14 +43,14 @@ import { CreateOrEditPersonModalComponent } from './persons/create-or-edit-perso
         HomeComponent,
         AboutComponent,
         TenantsComponent,
-		CreateTenantComponent,
-		EditTenantComponent,
+        CreateTenantComponent,
+        EditTenantComponent,
         UsersComponent,
-		CreateUserComponent,
-		EditUserComponent,
-      	RolesComponent,
-		CreateRoleComponent,
-		EditRoleComponent,
+        CreateUserComponent,
+        EditUserComponent,
+        RolesComponent,
+        CreateRoleComponent,
+        EditRoleComponent,
         TopBarComponent,
         TopBarLanguageSwitchComponent,
         SideBarUserAreaComponent,
@@ -60,8 +59,7 @@ import { CreateOrEditPersonModalComponent } from './persons/create-or-edit-perso
         RightSideBarComponent,
 
         PersonsComponent,
-        EditPersonComponent,
-        CreatePersonComponent,
+
         CreateOrEditPersonModalComponent
 
     ],

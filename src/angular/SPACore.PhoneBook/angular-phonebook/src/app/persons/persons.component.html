@@ -25,11 +25,8 @@
                       <tr>
                           <th>{{l('Name')}}</th>
                           <th>{{l('EmailAddress')}}</th>
-                          <th>{{l('Address')}}</th>
-                        
-                         
-                          
-                          <th>{{l('Actions')}}</th>
+                          <th>{{l('Address')}}</th>  
+                            <th>{{l('Actions')}}</th>
                       </tr>
                   </thead>
                   <tbody>
@@ -42,8 +39,8 @@
                                   <i class="material-icons">menu</i>
                               </a>
                               <ul class="dropdown-menu pull-right">
-                                 <li><a href="javascript:void(0);" class="waves-effect waves-block" (click)="editUser(user)"><i class="material-icons">create</i>{{l('Edit')}}</a></li>
-                                  <li><a href="javascript:void(0);" class="waves-effect waves-block" (click)="delete(user)"><i class="material-icons">delete_sweep</i>{{l('Delete')}}</a></li> 
+                                 <li><a href="javascript:void(0);" class="waves-effect waves-block" (click)="editUser(person)"><i class="material-icons">create</i>{{l('Edit')}}</a></li>
+                                  <li><a href="javascript:void(0);" class="waves-effect waves-block" (click)="delete(person)"><i class="material-icons">delete_sweep</i>{{l('Delete')}}</a></li> 
                               </ul>
                           </td>
                       </tr>

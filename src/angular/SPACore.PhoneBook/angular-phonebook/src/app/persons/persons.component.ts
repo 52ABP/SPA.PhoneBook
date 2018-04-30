@@ -3,9 +3,7 @@ import { Component, OnInit, ViewChild, Injector } from '@angular/core';
 import { appModuleAnimation } from '@shared/animations/routerTransition';
 import { PersonServiceProxy, PersonListDto, PagedResultDtoOfPersonListDto } from '@shared/service-proxies/service-proxies';
 
-import { CreatePersonComponent } from 'app/persons/create-person/create-person.component';
 
-import { EditPersonComponent } from 'app/persons/edit-person/edit-person.component';
 import { createViewChild } from '@angular/compiler/src/core';
 
 
@@ -18,9 +16,7 @@ import { createViewChild } from '@angular/compiler/src/core';
 })
 export class PersonsComponent extends PagedListingComponentBase<PersonListDto> {
 
-  @ViewChild('createPersonModal') createPersonModal: CreatePersonComponent;
 
-  @ViewChild('editPersonModal') editPersonMosal: EditPersonComponent;
 
 
   persons: PersonListDto[] = [];
@@ -51,8 +47,19 @@ export class PersonsComponent extends PagedListingComponentBase<PersonListDto> {
 
 
   }
+  // 删除功能
   protected delete(entity: PersonListDto): void {
-    throw new Error('Method not implemented.');
+abp.message.confirm(
+  '是否确定删除' + entity.name + '的信息',
+  (isconfirmed) => {
+if (isconfirmed) {
+  this._personService.deletePerson(entity.id).subscribe(() => {
+    abp.notify.info(entity.name + '的信息已被删除');
+   this.refresh();
+  });
+}
+  }
+);
   }
 
 
