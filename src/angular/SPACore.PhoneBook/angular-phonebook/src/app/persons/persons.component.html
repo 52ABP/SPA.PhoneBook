@@ -51,13 +51,12 @@
               <div class="text-align: center;" *ngIf="totalItems > pageSize">
                   <pagination-controls (pageChange)="getDataPage($event)" id="server"></pagination-controls>
               </div>
-              <button type="button" data-toggle="modal" class="btn btn-primary btn-circle waves-effect waves-circle waves-float pull-right" (click)="createUser()">
+              <button type="button" data-toggle="modal" class="btn btn-primary btn-circle waves-effect waves-circle waves-float pull-right" (click)="createPerson()">
                   <i class="material-icons">add</i>
               </button>
           </div>
       </div>
   </div>
-</div>
-
-<create-user-modal #createUserModal (modalSave)="refresh()"></create-user-modal>
-<edit-user-modal #editUserModal (modalSave)="refresh()"></edit-user-modal>
+</div> 
+ 
+<app-create-or-edit-person-modal #createOrEditPersonModal (modalSave)="refresh()"></app-create-or-edit-person-modal>

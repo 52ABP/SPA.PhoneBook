@@ -5,6 +5,7 @@ import { PersonServiceProxy, PersonListDto, PagedResultDtoOfPersonListDto } from
 
 
 import { createViewChild } from '@angular/compiler/src/core';
+import { CreateOrEditPersonModalComponent } from '@app/persons/create-or-edit-person-modal/create-or-edit-person-modal.component';
 
 
 
@@ -16,6 +17,7 @@ import { createViewChild } from '@angular/compiler/src/core';
 })
 export class PersonsComponent extends PagedListingComponentBase<PersonListDto> {
 
+@ViewChild('createOrEditPersonModal') createOrEditPersonModal: CreateOrEditPersonModalComponent;
 
 
 
@@ -63,5 +65,12 @@ if (isconfirmed) {
   }
 
 
+
+  // createPerson
+
+  createPerson(): void {
+
+    this.createOrEditPersonModal.show();
+  }
 
 }
