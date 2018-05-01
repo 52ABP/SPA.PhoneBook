@@ -1,5 +1,6 @@
 ﻿using System;
 using Abp.Application.Services.Dto;
+using LTM.Common.Extensions;
 
 namespace SPACore.PhoneBook.PhoneBooks.PhoneNumbers.Dtos
 {
@@ -14,5 +15,8 @@ namespace SPACore.PhoneBook.PhoneBooks.PhoneNumbers.Dtos
         /// </summary>
         public PhoneNumberType Type { get; set; }
         public DateTime CreationTime { get; set; }
+
+        public string TypeDescription => Type.ToDescription();
+
     }
 }

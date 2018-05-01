@@ -1,5 +1,6 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
+using LTM.Common.Extensions;
 
 namespace SPACore.PhoneBook.PhoneBooks.PhoneNumbers.Dtos
 {
@@ -22,6 +23,5 @@ namespace SPACore.PhoneBook.PhoneBooks.PhoneNumbers.Dtos
         /// </summary>
         public PhoneNumberType Type { get; set; }
 
-
-    }
+     }
 }

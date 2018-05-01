@@ -216,6 +216,74 @@ export class ConfigurationServiceProxy {
 }
 
 @Injectable()
+export class EnumServiceProxy {
+    private http: HttpClient;
+    private baseUrl: string;
+    protected jsonParseReviver: ((key: string, value: any) => any) | undefined = undefined;
+
+    constructor(@Inject(HttpClient) http: HttpClient, @Optional() @Inject(API_BASE_URL) baseUrl?: string) {
+        this.http = http;
+        this.baseUrl = baseUrl ? baseUrl : "";
+    }
+
+    /**
+     * @return Success
+     */
+    getPhoneNumberTypeList(): Observable<KeyValuePairOfStringAndString[]> {
+        let url_ = this.baseUrl + "/api/services/app/Enum/GetPhoneNumberTypeList";
+        url_ = url_.replace(/[?&]$/, "");
+
+        let options_ : any = {
+            observe: "response",
+            responseType: "blob",
+            headers: new HttpHeaders({
+                "Content-Type": "application/json", 
+                "Accept": "application/json"
+            })
+        };
+
+        return this.http.request("get", url_, options_).flatMap((response_ : any) => {
+            return this.processGetPhoneNumberTypeList(response_);
+        }).catch((response_: any) => {
+            if (response_ instanceof HttpResponseBase) {
+                try {
+                    return this.processGetPhoneNumberTypeList(<any>response_);
+                } catch (e) {
+                    return <Observable<KeyValuePairOfStringAndString[]>><any>Observable.throw(e);
+                }
+            } else
+                return <Observable<KeyValuePairOfStringAndString[]>><any>Observable.throw(response_);
+        });
+    }
+
+    protected processGetPhoneNumberTypeList(response: HttpResponseBase): Observable<KeyValuePairOfStringAndString[]> {
+        const status = response.status;
+        const responseBlob = 
+            response instanceof HttpResponse ? response.body : 
+            (<any>response).error instanceof Blob ? (<any>response).error : undefined;
+
+        let _headers: any = {}; if (response.headers) { for (let key of response.headers.keys()) { _headers[key] = response.headers.get(key); }};
+        if (status === 200) {
+            return blobToText(responseBlob).flatMap(_responseText => {
+            let result200: any = null;
+            let resultData200 = _responseText === "" ? null : JSON.parse(_responseText, this.jsonParseReviver);
+            if (resultData200 && resultData200.constructor === Array) {
+                result200 = [];
+                for (let item of resultData200)
+                    result200.push(KeyValuePairOfStringAndString.fromJS(item));
+            }
+            return Observable.of(result200);
+            });
+        } else if (status !== 200 && status !== 204) {
+            return blobToText(responseBlob).flatMap(_responseText => {
+            return throwException("An unexpected server error occurred.", status, _responseText, _headers);
+            });
+        }
+        return Observable.of<KeyValuePairOfStringAndString[]>(<any>null);
+    }
+}
+
+@Injectable()
 export class PersonServiceProxy {
     private http: HttpClient;
     private baseUrl: string;
@@ -605,6 +673,130 @@ export class PersonServiceProxy {
             });
         }
         return Observable.of<void>(<any>null);
+    }
+
+    /**
+     * @return Success
+     */
+    deletePhoneAsync(id: number): Observable<void> {
+        let url_ = this.baseUrl + "/api/services/app/Person/DeletePhoneAsync?";
+        if (id === undefined || id === null)
+            throw new Error("The parameter 'id' must be defined and cannot be null.");
+        else
+            url_ += "Id=" + encodeURIComponent("" + id) + "&"; 
+        url_ = url_.replace(/[?&]$/, "");
+
+        let options_ : any = {
+            observe: "response",
+            responseType: "blob",
+            headers: new HttpHeaders({
+                "Content-Type": "application/json", 
+            })
+        };
+
+        return this.http.request("delete", url_, options_).flatMap((response_ : any) => {
+            return this.processDeletePhoneAsync(response_);
+        }).catch((response_: any) => {
+            if (response_ instanceof HttpResponseBase) {
+                try {
+                    return this.processDeletePhoneAsync(<any>response_);
+                } catch (e) {
+                    return <Observable<void>><any>Observable.throw(e);
+                }
+            } else
+                return <Observable<void>><any>Observable.throw(response_);
+        });
+    }
+
+    protected processDeletePhoneAsync(response: HttpResponseBase): Observable<void> {
+        const status = response.status;
+        const responseBlob = 
+            response instanceof HttpResponse ? response.body : 
+            (<any>response).error instanceof Blob ? (<any>response).error : undefined;
+
+        let _headers: any = {}; if (response.headers) { for (let key of response.headers.keys()) { _headers[key] = response.headers.get(key); }};
+        if (status === 200) {
+            return blobToText(responseBlob).flatMap(_responseText => {
+            return Observable.of<void>(<any>null);
+            });
+        } else if (status === 401) {
+            return blobToText(responseBlob).flatMap(_responseText => {
+            return throwException("A server error occurred.", status, _responseText, _headers);
+            });
+        } else if (status === 403) {
+            return blobToText(responseBlob).flatMap(_responseText => {
+            return throwException("A server error occurred.", status, _responseText, _headers);
+            });
+        } else if (status !== 200 && status !== 204) {
+            return blobToText(responseBlob).flatMap(_responseText => {
+            return throwException("An unexpected server error occurred.", status, _responseText, _headers);
+            });
+        }
+        return Observable.of<void>(<any>null);
+    }
+
+    /**
+     * @input (optional) 
+     * @return Success
+     */
+    addPhone(input: PhoneNumberEditDto | null | undefined): Observable<PhoneNumberListDto> {
+        let url_ = this.baseUrl + "/api/services/app/Person/AddPhone";
+        url_ = url_.replace(/[?&]$/, "");
+
+        const content_ = JSON.stringify(input);
+
+        let options_ : any = {
+            body: content_,
+            observe: "response",
+            responseType: "blob",
+            headers: new HttpHeaders({
+                "Content-Type": "application/json", 
+                "Accept": "application/json"
+            })
+        };
+
+        return this.http.request("post", url_, options_).flatMap((response_ : any) => {
+            return this.processAddPhone(response_);
+        }).catch((response_: any) => {
+            if (response_ instanceof HttpResponseBase) {
+                try {
+                    return this.processAddPhone(<any>response_);
+                } catch (e) {
+                    return <Observable<PhoneNumberListDto>><any>Observable.throw(e);
+                }
+            } else
+                return <Observable<PhoneNumberListDto>><any>Observable.throw(response_);
+        });
+    }
+
+    protected processAddPhone(response: HttpResponseBase): Observable<PhoneNumberListDto> {
+        const status = response.status;
+        const responseBlob = 
+            response instanceof HttpResponse ? response.body : 
+            (<any>response).error instanceof Blob ? (<any>response).error : undefined;
+
+        let _headers: any = {}; if (response.headers) { for (let key of response.headers.keys()) { _headers[key] = response.headers.get(key); }};
+        if (status === 200) {
+            return blobToText(responseBlob).flatMap(_responseText => {
+            let result200: any = null;
+            let resultData200 = _responseText === "" ? null : JSON.parse(_responseText, this.jsonParseReviver);
+            result200 = resultData200 ? PhoneNumberListDto.fromJS(resultData200) : new PhoneNumberListDto();
+            return Observable.of(result200);
+            });
+        } else if (status === 401) {
+            return blobToText(responseBlob).flatMap(_responseText => {
+            return throwException("A server error occurred.", status, _responseText, _headers);
+            });
+        } else if (status === 403) {
+            return blobToText(responseBlob).flatMap(_responseText => {
+            return throwException("A server error occurred.", status, _responseText, _headers);
+            });
+        } else if (status !== 200 && status !== 204) {
+            return blobToText(responseBlob).flatMap(_responseText => {
+            return throwException("An unexpected server error occurred.", status, _responseText, _headers);
+            });
+        }
+        return Observable.of<PhoneNumberListDto>(<any>null);
     }
 }
 
@@ -2267,6 +2459,53 @@ export interface IChangeUiThemeInput {
     theme: string;
 }
 
+export class KeyValuePairOfStringAndString implements IKeyValuePairOfStringAndString {
+    readonly key: string | undefined;
+    readonly value: string | undefined;
+
+    constructor(data?: IKeyValuePairOfStringAndString) {
+        if (data) {
+            for (var property in data) {
+                if (data.hasOwnProperty(property))
+                    (<any>this)[property] = (<any>data)[property];
+            }
+        }
+    }
+
+    init(data?: any) {
+        if (data) {
+            (<any>this).key = data["key"];
+            (<any>this).value = data["value"];
+        }
+    }
+
+    static fromJS(data: any): KeyValuePairOfStringAndString {
+        data = typeof data === 'object' ? data : {};
+        let result = new KeyValuePairOfStringAndString();
+        result.init(data);
+        return result;
+    }
+
+    toJSON(data?: any) {
+        data = typeof data === 'object' ? data : {};
+        data["key"] = this.key;
+        data["value"] = this.value;
+        return data; 
+    }
+
+    clone() {
+        const json = this.toJSON();
+        let result = new KeyValuePairOfStringAndString();
+        result.init(json);
+        return result;
+    }
+}
+
+export interface IKeyValuePairOfStringAndString {
+    key: string | undefined;
+    value: string | undefined;
+}
+
 export class PagedResultDtoOfPersonListDto implements IPagedResultDtoOfPersonListDto {
     totalCount: number | undefined;
     items: PersonListDto[] | undefined;
@@ -2326,6 +2565,7 @@ export class PersonListDto implements IPersonListDto {
     name: string | undefined;
     emailAddress: string | undefined;
     address: string | undefined;
+    phoneNumbers: PhoneNumberListDto[] | undefined;
     isDeleted: boolean | undefined;
     deleterUserId: number | undefined;
     deletionTime: moment.Moment | undefined;
@@ -2349,6 +2589,11 @@ export class PersonListDto implements IPersonListDto {
             this.name = data["name"];
             this.emailAddress = data["emailAddress"];
             this.address = data["address"];
+            if (data["phoneNumbers"] && data["phoneNumbers"].constructor === Array) {
+                this.phoneNumbers = [];
+                for (let item of data["phoneNumbers"])
+                    this.phoneNumbers.push(PhoneNumberListDto.fromJS(item));
+            }
             this.isDeleted = data["isDeleted"];
             this.deleterUserId = data["deleterUserId"];
             this.deletionTime = data["deletionTime"] ? moment(data["deletionTime"].toString()) : <any>undefined;
@@ -2372,6 +2617,11 @@ export class PersonListDto implements IPersonListDto {
         data["name"] = this.name;
         data["emailAddress"] = this.emailAddress;
         data["address"] = this.address;
+        if (this.phoneNumbers && this.phoneNumbers.constructor === Array) {
+            data["phoneNumbers"] = [];
+            for (let item of this.phoneNumbers)
+                data["phoneNumbers"].push(item.toJSON());
+        }
         data["isDeleted"] = this.isDeleted;
         data["deleterUserId"] = this.deleterUserId;
         data["deletionTime"] = this.deletionTime ? this.deletionTime.toISOString() : <any>undefined;
@@ -2395,6 +2645,7 @@ export interface IPersonListDto {
     name: string | undefined;
     emailAddress: string | undefined;
     address: string | undefined;
+    phoneNumbers: PhoneNumberListDto[] | undefined;
     isDeleted: boolean | undefined;
     deleterUserId: number | undefined;
     deletionTime: moment.Moment | undefined;
@@ -2405,8 +2656,72 @@ export interface IPersonListDto {
     id: number | undefined;
 }
 
+export class PhoneNumberListDto implements IPhoneNumberListDto {
+    number: string | undefined;
+    personId: number | undefined;
+    type: PhoneNumberListDtoType | undefined;
+    creationTime: moment.Moment | undefined;
+    readonly typeDescription: string | undefined;
+    id: number | undefined;
+
+    constructor(data?: IPhoneNumberListDto) {
+        if (data) {
+            for (var property in data) {
+                if (data.hasOwnProperty(property))
+                    (<any>this)[property] = (<any>data)[property];
+            }
+        }
+    }
+
+    init(data?: any) {
+        if (data) {
+            this.number = data["number"];
+            this.personId = data["personId"];
+            this.type = data["type"];
+            this.creationTime = data["creationTime"] ? moment(data["creationTime"].toString()) : <any>undefined;
+            (<any>this).typeDescription = data["typeDescription"];
+            this.id = data["id"];
+        }
+    }
+
+    static fromJS(data: any): PhoneNumberListDto {
+        data = typeof data === 'object' ? data : {};
+        let result = new PhoneNumberListDto();
+        result.init(data);
+        return result;
+    }
+
+    toJSON(data?: any) {
+        data = typeof data === 'object' ? data : {};
+        data["number"] = this.number;
+        data["personId"] = this.personId;
+        data["type"] = this.type;
+        data["creationTime"] = this.creationTime ? this.creationTime.toISOString() : <any>undefined;
+        data["typeDescription"] = this.typeDescription;
+        data["id"] = this.id;
+        return data; 
+    }
+
+    clone() {
+        const json = this.toJSON();
+        let result = new PhoneNumberListDto();
+        result.init(json);
+        return result;
+    }
+}
+
+export interface IPhoneNumberListDto {
+    number: string | undefined;
+    personId: number | undefined;
+    type: PhoneNumberListDtoType | undefined;
+    creationTime: moment.Moment | undefined;
+    typeDescription: string | undefined;
+    id: number | undefined;
+}
+
 export class GetPersonForEditOutput implements IGetPersonForEditOutput {
     person: PersonEditDto | undefined;
+    phoneNumberType: ComboboxItemDto[] | undefined;
 
     constructor(data?: IGetPersonForEditOutput) {
         if (data) {
@@ -2420,6 +2735,11 @@ export class GetPersonForEditOutput implements IGetPersonForEditOutput {
     init(data?: any) {
         if (data) {
             this.person = data["person"] ? PersonEditDto.fromJS(data["person"]) : <any>undefined;
+            if (data["phoneNumberType"] && data["phoneNumberType"].constructor === Array) {
+                this.phoneNumberType = [];
+                for (let item of data["phoneNumberType"])
+                    this.phoneNumberType.push(ComboboxItemDto.fromJS(item));
+            }
         }
     }
 
@@ -2433,6 +2753,11 @@ export class GetPersonForEditOutput implements IGetPersonForEditOutput {
     toJSON(data?: any) {
         data = typeof data === 'object' ? data : {};
         data["person"] = this.person ? this.person.toJSON() : <any>undefined;
+        if (this.phoneNumberType && this.phoneNumberType.constructor === Array) {
+            data["phoneNumberType"] = [];
+            for (let item of this.phoneNumberType)
+                data["phoneNumberType"].push(item.toJSON());
+        }
         return data; 
     }
 
@@ -2446,6 +2771,7 @@ export class GetPersonForEditOutput implements IGetPersonForEditOutput {
 
 export interface IGetPersonForEditOutput {
     person: PersonEditDto | undefined;
+    phoneNumberType: ComboboxItemDto[] | undefined;
 }
 
 export class PersonEditDto implements IPersonEditDto {
@@ -2453,6 +2779,7 @@ export class PersonEditDto implements IPersonEditDto {
     name: string;
     emailAddress: string | undefined;
     address: string | undefined;
+    phoneNumbers: PhoneNumberEditDto[] | undefined;
 
     constructor(data?: IPersonEditDto) {
         if (data) {
@@ -2469,6 +2796,11 @@ export class PersonEditDto implements IPersonEditDto {
             this.name = data["name"];
             this.emailAddress = data["emailAddress"];
             this.address = data["address"];
+            if (data["phoneNumbers"] && data["phoneNumbers"].constructor === Array) {
+                this.phoneNumbers = [];
+                for (let item of data["phoneNumbers"])
+                    this.phoneNumbers.push(PhoneNumberEditDto.fromJS(item));
+            }
         }
     }
 
@@ -2485,6 +2817,11 @@ export class PersonEditDto implements IPersonEditDto {
         data["name"] = this.name;
         data["emailAddress"] = this.emailAddress;
         data["address"] = this.address;
+        if (this.phoneNumbers && this.phoneNumbers.constructor === Array) {
+            data["phoneNumbers"] = [];
+            for (let item of this.phoneNumbers)
+                data["phoneNumbers"].push(item.toJSON());
+        }
         return data; 
     }
 
@@ -2501,6 +2838,113 @@ export interface IPersonEditDto {
     name: string;
     emailAddress: string | undefined;
     address: string | undefined;
+    phoneNumbers: PhoneNumberEditDto[] | undefined;
+}
+
+export class ComboboxItemDto implements IComboboxItemDto {
+    value: string | undefined;
+    displayText: string | undefined;
+    isSelected: boolean | undefined;
+
+    constructor(data?: IComboboxItemDto) {
+        if (data) {
+            for (var property in data) {
+                if (data.hasOwnProperty(property))
+                    (<any>this)[property] = (<any>data)[property];
+            }
+        }
+    }
+
+    init(data?: any) {
+        if (data) {
+            this.value = data["value"];
+            this.displayText = data["displayText"];
+            this.isSelected = data["isSelected"];
+        }
+    }
+
+    static fromJS(data: any): ComboboxItemDto {
+        data = typeof data === 'object' ? data : {};
+        let result = new ComboboxItemDto();
+        result.init(data);
+        return result;
+    }
+
+    toJSON(data?: any) {
+        data = typeof data === 'object' ? data : {};
+        data["value"] = this.value;
+        data["displayText"] = this.displayText;
+        data["isSelected"] = this.isSelected;
+        return data; 
+    }
+
+    clone() {
+        const json = this.toJSON();
+        let result = new ComboboxItemDto();
+        result.init(json);
+        return result;
+    }
+}
+
+export interface IComboboxItemDto {
+    value: string | undefined;
+    displayText: string | undefined;
+    isSelected: boolean | undefined;
+}
+
+export class PhoneNumberEditDto implements IPhoneNumberEditDto {
+    id: number | undefined;
+    number: string;
+    personId: number | undefined;
+    type: PhoneNumberEditDtoType | undefined;
+
+    constructor(data?: IPhoneNumberEditDto) {
+        if (data) {
+            for (var property in data) {
+                if (data.hasOwnProperty(property))
+                    (<any>this)[property] = (<any>data)[property];
+            }
+        }
+    }
+
+    init(data?: any) {
+        if (data) {
+            this.id = data["id"];
+            this.number = data["number"];
+            this.personId = data["personId"];
+            this.type = data["type"];
+        }
+    }
+
+    static fromJS(data: any): PhoneNumberEditDto {
+        data = typeof data === 'object' ? data : {};
+        let result = new PhoneNumberEditDto();
+        result.init(data);
+        return result;
+    }
+
+    toJSON(data?: any) {
+        data = typeof data === 'object' ? data : {};
+        data["id"] = this.id;
+        data["number"] = this.number;
+        data["personId"] = this.personId;
+        data["type"] = this.type;
+        return data; 
+    }
+
+    clone() {
+        const json = this.toJSON();
+        let result = new PhoneNumberEditDto();
+        result.init(json);
+        return result;
+    }
+}
+
+export interface IPhoneNumberEditDto {
+    id: number | undefined;
+    number: string;
+    personId: number | undefined;
+    type: PhoneNumberEditDtoType | undefined;
 }
 
 export class CreateOrUpdatePersonInput implements ICreateOrUpdatePersonInput {
@@ -3817,6 +4261,18 @@ export interface IPagedResultDtoOfUserDto {
 }
 
 export enum IsTenantAvailableOutputState {
+    _1 = 1, 
+    _2 = 2, 
+    _3 = 3, 
+}
+
+export enum PhoneNumberListDtoType {
+    _1 = 1, 
+    _2 = 2, 
+    _3 = 3, 
+}
+
+export enum PhoneNumberEditDtoType {
     _1 = 1, 
     _2 = 2, 
     _3 = 3, 

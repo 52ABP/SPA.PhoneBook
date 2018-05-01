@@ -6,7 +6,7 @@
 
 
 
-      <form *ngIf="active" #createOrEditPersonForm="ngForm" id=frm_createOrEditPerson novalidate (ngSubmit)="save()" >
+      <form *ngIf="active" #createOrEditPersonForm="ngForm" id=frm_createOrEditPerson novalidate (ngSubmit)="save()">
 
 
         <div class="modal-header">
@@ -30,7 +30,8 @@
               <div class="form-group form-float">
                 <div class="form-line">
                   <label for="name" class="form-label">Name</label>
-                  <input type="text" [(ngModel)]="person.name" required minlength="2"  maxlength="90" class="validate form-control" id="name" name="name">
+                  <input type="text" [(ngModel)]="person.name" required minlength="2" maxlength="90" class="validate form-control" id="name"
+                    name="name">
                 </div>
               </div>
             </div>
@@ -43,7 +44,8 @@
 
               <div class="form-group form-float">
                 <div class="form-line">
-                  <input type="email" name="emailAddress" [(ngModel)]='person.emailAddress'  pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{1,})+$" id="emailAddress" class="form-control validate">
+                  <input type="email" name="emailAddress" [(ngModel)]='person.emailAddress' pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{1,})+$"
+                    id="emailAddress" class="form-control validate">
 
                   <label for="emailAddress" class="form-label">EmailAddress</label>
                 </div>
@@ -52,21 +54,8 @@
           </div>
 
 
-          
-          <div class="row">
-            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-              
-              <div class="form-group">
-                <select name="phoneNumberType" id="phoneNumberType" required class='form-control'>
-                    
-                  <option value="">没有选择任何的信息</option>
-                </select>
-              </div>
 
-              
-            </div>
-          </div>
-          
+
 
 
           <div class="row">

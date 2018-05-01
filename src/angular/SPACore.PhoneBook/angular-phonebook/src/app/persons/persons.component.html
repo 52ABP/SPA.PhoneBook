@@ -1,288 +1,130 @@
-<div class="row clearfix"    [@routerTransition]>
+<div class="row clearfix" [@routerTransition]>
 
-   
-    
+
+
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-        
-<div class="card main-content">
-    <div class="header">
-           
-        
-        <div class="row clearfix">
-            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-                    <h2>
+
+        <div class="card main-content">
+            <div class="header">
+                <div class="row clearfix">
+                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                        <h2>
                             {{l('Persons')}} ({{persons.length}})
                             <small>联系人列表</small>
                         </h2>
-            </div>
-            
-            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 align-right ">
-                    <button class="btn btn-primary blue" ng-click="vm.openCreatePersonModal()">
+                    </div>
+
+                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 align-right ">
+                        <button class="btn btn-primary blue" ng-click="vm.openCreatePersonModal()">
                             <i class="fa fa-plus"></i>{{l('CreateNewPerson')}}
                         </button>
-       
-            </div>
-            
-        </div>
+                    </div>
 
-        <div class="row">
+                </div>
+                <div class="row">
 
-        </div>
-        
-        <div class="row clearfix  ">
-            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 ">
-                    <div class="  input-group   btn-group btn-primary form-group                  ">
+                </div>
+
+                <div class="row clearfix  ">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 ">
+                        <div class="  input-group   btn-group btn-primary form-group                  ">
                             <input [(ngModel)]="filter" name="filterText" auto-focus class="form-control " [placeholder]="l('SearchWithThreeDot')" type="text">
                             <span class="input-group-btn">
                                 <button (click)="refresh()" class="btn btn-default" type="submit">
                                     <i class="icon-magnifier"></i>
                                 </button>
-    
-    
                             </span>
                         </div>
-            </div>
-        </div>
-        
-        
-    </div>
-
-
-<div class="row">
-    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-        
-<div class="body">
-
-        <div class="list-group">
-                <div class="list-group-item" *ngFor="let person of persons">
-                    <h5 class="list-group-item-heading">
-                       Name:  {{person.name}} Address: {{person.address}}
-                        <button (click)="delete(person)" class="btn btn-circle btn-icon-only red delete-person" href="javascript:;">
-                            <i class="icon-trash"></i>
-                        </button>
-                    </h5>
-                    <p class="list-group-item-text">
-                     EmailAddress:   {{person.emailAddress}}
-                    </p>
-
-            <div class="table-responsive">
-                <table class="table table-hover ">
-
-                        <thead>
-                                <tr>
-                                    <th style="width:10%">#</th>
-                                    <th style="width:15%">{{l("Type")}}</th>
-                                    <th style="width:75%">{{l("PhoneNumber")}}</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                    <tr *ngFor="let phone of persons">
-                                        <td>1</td>
-                                        <td>Task A</td>
-                                        <td><span class="label bg-green">Doing</span></td>
-                                        <td>John Doe</td>
-                                        <td>
-                                            <div class="progress">
-                                                <div class="progress-bar bg-green" role="progressbar" aria-valuenow="62" aria-valuemin="0" aria-valuemax="100" style="width: 62%"></div>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>2</td>
-                                        <td>Task B</td>
-                                        <td><span class="label bg-blue">To Do</span></td>
-                                        <td>John Doe</td>
-                                        <td>
-                                            <div class="progress">
-                                                <div class="progress-bar bg-blue" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%"></div>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>3</td>
-                                        <td>Task C</td>
-                                        <td><span class="label bg-light-blue">On Hold</span></td>
-                                        <td>John Doe</td>
-                                        <td>
-                                            <div class="progress">
-                                                <div class="progress-bar bg-light-blue" role="progressbar" aria-valuenow="72" aria-valuemin="0" aria-valuemax="100" style="width: 72%"></div>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>4</td>
-                                        <td>Task D</td>
-                                        <td><span class="label bg-orange">Wait Approvel</span></td>
-                                        <td>John Doe</td>
-                                        <td>
-                                            <div class="progress">
-                                                <div class="progress-bar bg-orange" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100" style="width: 95%"></div>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>5</td>
-                                        <td>Task E</td>
-                                        <td>
-                                            <span class="label bg-red">Suspended</span>
-                                        </td>
-                                        <td>John Doe</td>
-                                        <td>
-                                            <div class="progress">
-                                                <div class="progress-bar bg-red" role="progressbar" aria-valuenow="87" aria-valuemin="0" aria-valuemax="100" style="width: 87%"></div>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                </table>
-
-            </div>
-
-
-</div></div>
-</div>
-
-    </div>
-</div>
-
-
-    <div class="body">
-
-            <div class="list-group">
-                <div class="list-group-item" *ngFor="let person of persons">
-                    <h5 class="list-group-item-heading">
-                       名字： {{person.name}} 邮箱： {{person.address}}
-                        <button (click)="delete(person)" class="btn btn-circle btn-icon-only red delete-person" href="javascript:;">
-                            <i class="icon-trash"></i>
-                        </button>
-                    </h5>
-                    <p class="list-group-item-text">
-                     地址：   {{person.emailAddress}}
-                    </p>
-                    <div class="table-scrollable" ng-if="person==vm.editingPerson">
-                        <table class="table table-hover">
-                            <thead>
-                                <tr>
-                                    <th style="width:10%"></th>
-                                    <th style="width:15%">@L("Type")</th>
-                                    <th style="width:75%">@L("PhoneNumber")</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr ng-repeat="phone in person.phones">
-                                    <td>
-                                        <button ng-click="vm.deletePhone(phone, person)" class="btn btn-sm btn-default">
-                                            <i class="icon-trash"></i>
-                                        </button>
-                                    </td>
-                                    <!-- <td>{{vm.getPhoneTypeAsString(phone.type)}}</td>
-                                                    <td>{{phone.number}}</td> -->
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <button ng-click="vm.addPhone(person.newPhone, person)" class="btn btn-sm green">
-                                            <i class="fa fa-floppy-o"></i>
-                                        </button>
-                                    </td>
-                                    <td>
-                                        <select name="Type" ng-model="person.newPhone.type">
-                                            <option value="0">@L("PhoneType_Mobile")</option>
-                                            <option value="1">@L("PhoneType_Home")</option>
-                                            <option value="2">@L("PhoneType_Business")</option>
-                                        </select>
-                                    </td>
-                                    <td>
-                                        <input type="text" name="Number" ng-model="person.newPhone.number" />
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
                     </div>
                 </div>
             </div>
 
 
-        </div>
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+                    <div class="body">
+
+                        <div class="list-group">
+                            <div class="list-group-item" *ngFor="let person of persons">
+                                <h5 class="list-group-item-heading">
+                                    Name: {{person.name}} Address: {{person.address}}
+                                    <span class="buttons">
+                                        <button (click)="editPerson(person)" title='编辑联系人' class="btn btn-circle btn-icon-only color-code green">
+                                            <i class="icon-pencil"></i>
+                                        </button>
+                                        <button (click)="editPhoneNumbers(person)" title='修改电话本内容' class="btn btn-circle btn-icon-only " href="javascript:;">
+                                            <i class="icon-calendar"></i>
+                                        </button>
+                                        <button (click)="delete(person)" title="删除联系人" class="btn btn-circle btn-icon-only red delete-person" href="javascript:;">
+                                            <i class="icon-trash"></i>
+                                        </button>
+
+                                    </span>
+
+                                </h5>
+                                <p class="list-group-item-text">
+                                    EmailAddress: {{person.emailAddress}}
+                                </p>
+
+                                <div *ngIf="person===editingPerson" class="table-responsive">
+                                    <table class="table table-hover ">
+
+                                        <thead>
+                                            <tr>
+                                                <th style="width:10%">#</th>
+                                                <th style="width:15%">{{l("Type")}}</th>
+                                                <th style="width:75%">{{l("PhoneNumber")}}</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr *ngFor="let phone of person.phoneNumbers">
+                                                <td>
+                                                    <button (click)="deletePhone(phone, person)" class="btn btn-outline-danger m-btn m-btn--icon m-btn--icon-only m-btn--pill">
+                                                        <i class="fa fa-times"></i>
+                                                    </button>
+                                                </td>
+                                                <td>{{phone.typeDescription}}</td>
+                                                <!-- <td>{{getPhoneTypeAsString(phone.type)}}</td> -->
+                                                <td>{{phone.number}}</td>
+
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <button (click)="savePhone()" class="btn btn-sm btn-success">
+                                                        <i class="fa fa-floppy-o"></i>
+                                                    </button>
+                                                </td>
+                                                <td>
+                                                    <select name="Type" [(ngModel)]="newPhonNumber.type" class="form-control">
+
+                                                        <option *ngFor="let numberType of phoneNumberTypeList" [value]=numberType.value>{{numberType.key}}</option>
+
+                                                        <!-- <option value="1">移动电话</option>
+                                                        <option value="2">家庭</option>
+                                                        <option value="3">公司</option> -->
+                                                    </select>
+                                                </td>
+                                                <td>
+                                                    <input type="text" name="number" [(ngModel)]="newPhonNumber.number" class="form-control" />
+                                                </td>
+                                            </tr>
+
+                                        </tbody>
+                                    </table>
+
+                                </div>
 
 
+                            </div>
+                        </div>
+                    </div>
 
-    
-</div>
-
-
-
-    </div>
-    
- 
-    <div class="row">
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-            <div class="card">
-             
-                <div class="header">
-                   
                 </div>
-
-
-
-            
             </div>
-        </div>
-    </div>
 
 
 
-    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-        <div class="card main-content">
-
-            <div class="body table-responsive">
-
-                <!-- ******************************************************** -->
-                <table class="table table-hover table-striped">
-                    <thead>
-                        <tr>
-                            <th>{{l('Name')}}</th>
-                            <th>{{l('EmailAddress')}}</th>
-                            <th>{{l('Address')}}</th>
-                            <th>{{l('Actions')}}</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr *ngFor="let person of persons| paginate: { id: 'server', itemsPerPage: pageSize, currentPage: pageNumber, totalItems: totalItems }">
-                            <td>{{person.name}}</td>
-                            <td>{{person.emailAddress}}</td>
-                            <td>{{person.address}}</td>
-                            <td class="dropdown">
-                                <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                                    <i class="material-icons">menu</i>
-                                </a>
-                                <ul class="dropdown-menu pull-right">
-                                    <li>
-                                        <a href="javascript:void(0);" class="waves-effect waves-block" (click)="editPerson(person)">
-                                            <i class="material-icons">assignment</i>编辑电话本</a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0);" class="waves-effect waves-block" (click)="editPerson(person)">
-                                            <i class="material-icons">create</i>{{l('Edit')}}</a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0);" class="waves-effect waves-block" (click)="delete(person)">
-                                            <i class="material-icons">delete_sweep</i>{{l('Delete')}}</a>
-                                    </li>
-                                </ul>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-                <!-- ******************************************************** -->
-
-                <div class="text-align: center;" *ngIf="totalItems > pageSize">
-                    <pagination-controls (pageChange)="getDataPage($event)" id="server"></pagination-controls>
-                </div>
-                <button type="button" data-toggle="modal" class="btn btn-primary btn-circle waves-effect waves-circle waves-float pull-right"
-                    (click)="createPerson()">
-                    <i class="material-icons">add</i>
-                </button>
-            </div>
         </div>
     </div>
 </div>

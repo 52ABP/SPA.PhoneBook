@@ -1,4 +1,6 @@
-﻿namespace SPACore.PhoneBook.PhoneBooks.PhoneNumbers
+﻿using System.ComponentModel;
+
+namespace SPACore.PhoneBook.PhoneBooks.PhoneNumbers
 {
 
     /// <summary>
@@ -9,14 +11,17 @@
         /// <summary>
         /// 移动电话
         /// </summary>
+        [Description("移动电话")]
         Mobile=1,
         /// <summary>
         /// 家庭
         /// </summary>
-        Home=2,
+        [Description("家庭")]
+        Home =2,
         /// <summary>
         /// 公司
         /// </summary>
-        Company=3
+        [Description("公司")]
+        Company =3
     }
 }
