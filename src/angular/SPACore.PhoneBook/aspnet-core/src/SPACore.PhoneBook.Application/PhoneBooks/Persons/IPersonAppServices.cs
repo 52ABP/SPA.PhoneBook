@@ -3,6 +3,7 @@ using System.Threading.Tasks;
 using Abp.Application.Services;
 using Abp.Application.Services.Dto;
 using SPACore.PhoneBook.PhoneBooks.Persons.Dtos;
+using SPACore.PhoneBook.PhoneBooks.PhoneNumbers.Dtos;
 
 namespace SPACore.PhoneBook.PhoneBooks.Persons
 {
@@ -54,5 +55,21 @@ namespace SPACore.PhoneBook.PhoneBooks.Persons
         /// 批量删除Person
         /// </summary>
         Task BatchDeletePersonsAsync(List<int> input);
+
+        /// <summary>
+        /// 删除电话
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns></returns>
+        Task DeletePhoneAsync(EntityDto<long> input);
+        /// <summary>
+        /// 添加电话号码
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns></returns>
+        Task<PhoneNumberListDto> AddPhone(PhoneNumberEditDto input);
+
+
+
     }
 }

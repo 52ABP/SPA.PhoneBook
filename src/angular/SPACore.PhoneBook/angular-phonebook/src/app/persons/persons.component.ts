@@ -1,3 +1,4 @@
+import { PhoneBookTemplatePage } from './../../../e2e/app.po';
 import { PagedListingComponentBase, PagedRequestDto } from 'shared/paged-listing-component-base';
 import { Component, OnInit, ViewChild, Injector } from '@angular/core';
 import { appModuleAnimation } from '@shared/animations/routerTransition';
@@ -15,17 +16,21 @@ import { CreateOrEditPersonModalComponent } from '@app/persons/create-or-edit-pe
   styleUrls: ['./persons.component.css'],
   animations: [appModuleAnimation()]
 })
-export class PersonsComponent extends PagedListingComponentBase<PersonListDto> {
+export class PersonsComponent extends PagedListingComponentBase<PersonListDto>   {
 
 @ViewChild('createOrEditPersonModal') createOrEditPersonModal: CreateOrEditPersonModalComponent;
 
 
-
+filter = '';
   persons: PersonListDto[] = [];
 
 
 
-  constructor(
+
+
+
+
+  constructor (
     injector: Injector,
     private _personService: PersonServiceProxy) {
 
@@ -39,7 +44,7 @@ export class PersonsComponent extends PagedListingComponentBase<PersonListDto> {
   protected list(request: PagedRequestDto, pageNumber: number, finishedCallback: Function): void {
 
     this._personService.
-      getPagedPersons('', 'Id', request.maxResultCount, request.skipCount)
+      getPagedPersons(this.filter, 'Id', request.maxResultCount, request.skipCount)
       .finally(() => { finishedCallback(); }).subscribe((result: PagedResultDtoOfPersonListDto) => {
         this.persons = result.items;
         this.showPaging(result, pageNumber);

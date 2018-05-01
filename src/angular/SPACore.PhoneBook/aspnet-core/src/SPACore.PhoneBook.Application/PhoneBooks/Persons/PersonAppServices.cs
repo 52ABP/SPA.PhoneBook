@@ -1,14 +1,19 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using System.Linq.Dynamic.Core;
 using System.Threading.Tasks;
 using Abp.Application.Services.Dto;
 using Abp.Authorization;
 using Abp.AutoMapper;
 using Abp.Domain.Repositories;
+using Abp.Extensions;
 using Abp.Linq.Extensions;
 using Microsoft.EntityFrameworkCore;
+using SPACore.PhoneBook.Enums;
 using SPACore.PhoneBook.PhoneBooks.Persons.Authorization;
 using SPACore.PhoneBook.PhoneBooks.Persons.Dtos;
+using SPACore.PhoneBook.PhoneBooks.PhoneNumbers;
+using SPACore.PhoneBook.PhoneBooks.PhoneNumbers.Dtos;
 
 namespace SPACore.PhoneBook.PhoneBooks.Persons
 {
@@ -21,15 +26,18 @@ namespace SPACore.PhoneBook.PhoneBooks.Persons
         ////BCC/ BEGIN CUSTOM CODE SECTION
         ////ECC/ END CUSTOM CODE SECTION
         private readonly IRepository<Person, int> _personRepository;
+        private readonly IRepository<PhoneNumber, long> _phoneNumbeRepository;
+
+        private readonly IEnumAppService _enumAppService;
 
         /// <summary>
         /// 构造函数
         /// </summary>
-        public PersonAppService(IRepository<Person, int> personRepository
-    
-        )
+        public PersonAppService(IRepository<Person, int> personRepository, IEnumAppService enumAppService, IRepository<PhoneNumber, long> phoneNumbeRepository)
         {
             _personRepository = personRepository;
+            _enumAppService = enumAppService;
+            _phoneNumbeRepository = phoneNumbeRepository;
         }
 
         /// <summary>
@@ -40,7 +48,11 @@ namespace SPACore.PhoneBook.PhoneBooks.Persons
         public async Task<PagedResultDto<PersonListDto>> GetPagedPersons(GetPersonsInput input)
         {
 
-            var query = _personRepository.GetAll().Include(a => a.PhoneNumbers);
+ 
+            var query = _personRepository.GetAll().Include(a => a.PhoneNumbers).WhereIf(!input.Filter.IsNullOrEmpty(),
+                p => p.Name.Contains(input.Filter) ||
+                     p.Address.Contains(input.Filter) ||
+                     p.EmailAddress.Contains(input.Filter));
             //TODO:根据传入的参数添加过滤条件
             var personCount = await query.CountAsync();
 
@@ -95,17 +107,30 @@ namespace SPACore.PhoneBook.PhoneBooks.Persons
             if (input.Id.HasValue)
             {
                 var entity = await _personRepository.GetAllIncluding(a => a.PhoneNumbers).FirstOrDefaultAsync(a => a.Id == input.Id.Value);
-
-              //  personEditDto = entity.MapTo<PersonEditDto>();
-
+                
                 personEditDto = ObjectMapper.Map<PersonEditDto>(entity);
             }
             else
             {
                 personEditDto = new PersonEditDto();
             }
-
+            
             output.Person = personEditDto;
+
+
+     //       IsSelected = userMarginsEditDto.Operationdescribes.ToDescription() == a.Key,
+
+            
+
+            //output.PhoneNumberType = _enumAppService.GetPhoneNumberTypeList().Select(a=>new ComboboxItemDto()
+            //{
+            //    DisplayText = a.Key,
+            //    Value = a.Value,
+            //    IsSelected = personEditDto.
+            //});
+
+
+
             return output;
 
         }
@@ -181,6 +206,29 @@ namespace SPACore.PhoneBook.PhoneBooks.Persons
             //TODO:批量删除前的逻辑判断，是否允许删除
             await _personRepository.DeleteAsync(s => input.Contains(s.Id));
         }
+
+        #region 电话有关的逻辑
+        public async Task DeletePhoneAsync(EntityDto<long> input)
+        {
+     await       _phoneNumbeRepository.DeleteAsync(input.Id);
+         }
+
+        public async Task<PhoneNumberListDto> AddPhone(PhoneNumberEditDto input)
+        {
+            var person = _personRepository.Get(input.PersonId);
+            await _personRepository.EnsureCollectionLoadedAsync(person, p => p.PhoneNumbers);
+
+            var phoneNumber = ObjectMapper.Map<PhoneNumber>(input);
+            person.PhoneNumbers.Add(phoneNumber);
+          //  通过保存到数据库来获取新手机号码自增的ID
+             await CurrentUnitOfWork.SaveChangesAsync();
+
+            return ObjectMapper.Map<PhoneNumberListDto>(phoneNumber);
+        }
+
+
+
+        #endregion
 
     }
 }
