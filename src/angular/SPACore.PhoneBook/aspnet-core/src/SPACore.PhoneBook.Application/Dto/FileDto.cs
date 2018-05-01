@@ -1,6 +1,5 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
-using SPACore.PhoneBook.PhoneBooks.Persons;
 
 namespace SPACore.PhoneBook.Dto
 {

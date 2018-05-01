@@ -1,6 +1,4 @@
-﻿using SPACore.PhoneBook.PhoneBooks.Persons;
-
-namespace SPACore.PhoneBook.Dto
+﻿namespace SPACore.PhoneBook.Dto
 {
     public class PagedSortedAndFilteredInputDto : PagedAndSortedInputDto
     {
