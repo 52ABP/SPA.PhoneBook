@@ -1,9 +1,12 @@
 # SPA.PhoneBook
-基于SPA做的电话薄项目，Angular和vue同时使用
-
-VUE版本的不一定做
+基于SPA做的电话薄项目， 前端使用的是  Angular  进行开发
 
 
+## 预览效果图
+
+拥有的功能有哪些
+
+![Angular_PhoneBook_pre](docs/images/readme/Angular_PhoneBook_pre.gif)
 
 
 ## 必备条件
