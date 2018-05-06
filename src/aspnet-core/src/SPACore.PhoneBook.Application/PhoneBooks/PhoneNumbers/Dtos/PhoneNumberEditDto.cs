@@ -17,6 +17,5 @@ namespace SPACore.PhoneBook.PhoneBooks.PhoneNumbers.Dtos
         public string Number { get; set; }
         public PhoneNumberType Type { get; set; }
         public int PersonId { get; set; }
-        public DateTime CreationTime { get; set; }
-    }
+     }
 }

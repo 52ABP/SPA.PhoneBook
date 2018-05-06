@@ -50,8 +50,8 @@ export class CreateOrEditPersonModalComponent extends AppComponentBase {
 
   /**
    * 弹出模态框信息
-   * 
-   * @param {number} [personId] 
+   *
+   * @param {number} [personId]
    * @memberof CreateOrEditPersonModalComponent
    */
   show(personId?: number): void {

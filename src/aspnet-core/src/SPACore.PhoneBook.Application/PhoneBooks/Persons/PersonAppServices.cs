@@ -49,7 +49,7 @@ namespace SPACore.PhoneBook.PhoneBooks.Persons
         /// <returns></returns>
         public async Task<PagedResultDto<PersonListDto>> GetPagedPersons(GetPersonsInput input)
         {
-            var query = _personRepository.GetAll().WhereIf(!input.Filter.IsNullOrWhiteSpace(),
+            var query = _personRepository.GetAll().Include(a=>a.PhoneNumbers).WhereIf(!input.Filter.IsNullOrWhiteSpace(),
                 a => a.Name.Contains(input.Filter) || a.Address.Contains(input.Filter) ||
                      a.EmailAddress.Contains(input.Filter));
             //TODO:根据传入的参数添加过滤条件

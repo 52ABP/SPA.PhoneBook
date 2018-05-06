@@ -1,8 +1,11 @@
 import { CreateOrEditPersonModalComponent } from './create-or-edit-person-modal/create-or-edit-person-modal.component';
-import { PersonListDto, PersonServiceProxy, PagedResultDtoOfPersonListDto } from './../../shared/service-proxies/service-proxies';
+import { PagedResultDtoOfPersonListDto, EnumServiceProxy, PhoneNumberEditDtoType } from './../../shared/service-proxies/service-proxies';
+import { PersonListDto, PersonServiceProxy, PhoneNumberEditDto, PhoneNumberListDto } from './../../shared/service-proxies/service-proxies';
+
 import { PagedListingComponentBase, PagedRequestDto } from 'shared/paged-listing-component-base';
 import { Component, OnInit, Injector, ViewChild } from '@angular/core';
 import { appModuleAnimation } from '@shared/animations/routerTransition';
+import * as _ from 'lodash';
 
 
 
@@ -23,14 +26,27 @@ export class PersonsComponent extends PagedListingComponentBase<PersonListDto>  
 
   people: PersonListDto[] = [];
 
+  /**
+   *
+   *
+   * @type {PersonListDto}
+   * @memberof PersonsComponent
+   */
+  editingPerson: PersonListDto = null;
+
+  newPhoneNumber: PhoneNumberEditDto = null;
+
+  phonenumberTypeList: any = null;
+
+
 
 
 
   constructor(
 
     injector: Injector,
-    private _personService: PersonServiceProxy
-
+    private _personService: PersonServiceProxy,
+    private _enumService: EnumServiceProxy,
   ) {
     super(injector)
 
@@ -109,6 +125,68 @@ export class PersonsComponent extends PagedListingComponentBase<PersonListDto>  
 
     this.CreateOrEditPersonModal.show();
   }
+
+  /**
+   * 删除电话号码
+   *
+   * @param {PhoneNumberListDto} phoneNumber
+   * @param {PersonListDto} person
+   * @memberof PersonsComponent
+   */
+  deletePhoneNumer(phoneNumber: PhoneNumberListDto, person: PersonListDto): void {
+    abp.message.confirm('是否确定删除电话号码' + phoneNumber.number, (isConfirmed) => {
+
+      if (isConfirmed) {
+
+        this._personService.deletePerson(phoneNumber.id).subscribe(
+
+          () => {
+            this.notify.success(this.l('SuccessfullyDeleted'));
+            // 无刷新处理
+            _.remove(person.phoneNumbers, phoneNumber);
+
+          }
+        );
+      }
+
+    });
+
+
+  }
+  /**
+   * 修改某个联系人的电话号码
+   *
+   * @param {PersonListDto} person
+   * @memberof PersonsComponent
+   */
+  editPhoneNumbersByPerson(person: PersonListDto): void {
+    // 显示枚举信息
+    this._enumService.getPhoneNumberTypeList().subscribe(result => {
+      this.phonenumberTypeList = result;
+
+
+      if (person === this.editingPerson) {
+        this.editingPerson = null;
+      } else {
+        this.editingPerson = person;
+        this.newPhoneNumber = new PhoneNumberEditDto();
+
+        this.newPhoneNumber.personId = person.id;
+        this.newPhoneNumber.type = PhoneNumberEditDtoType._1;
+
+
+      }
+
+
+
+    })
+
+
+
+
+  }
+
+
 
 
 
