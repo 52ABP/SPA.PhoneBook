@@ -1,3 +1,100 @@
-<p>
-  create-or-edit-person-modal works!
-</p>
+<div bsModal #createOrEditModal="bs-modal" class="modal fade" (onShown)="onShown()" tabindex="-1" role="dialog" aria-labelledby="createOrEditModal"
+    aria-hidden="true" [config]="{backdrop:'static'}">
+
+
+
+    <div class="modal-dialog">
+        <div class="modal-content" #modalContent>
+
+            <form *ngIf="active" #createOrEditPersonForm="ngForm" novalidate (ngSubmit)="save()">
+
+                <div class="modal-header">
+                    <button type="button" class="close" (click)="close()" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title">
+
+                        <span *ngIf="person.id">编辑联系人：{{person.name}}</span>
+
+                        <span *ngIf="!person.id">添加联系人</span>
+
+                    </h4>
+                </div>
+                <div class="modal-body">
+
+
+
+
+                    <div class="row clearfix">
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+
+                            <div class="form-group form-float ">
+                                <div class="form-line">
+                                    <label for="name" class="form-label">姓名:</label>
+                                    <input type="text" [(ngModel)]="person.name" required minlength="2" maxlength="90" class="validate form-control" id="name"
+                                        name="name">
+
+                                </div>
+
+
+                            </div>
+
+
+
+                        </div>
+                    </div>
+
+                    <div class="row clearfix">
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+
+                            <div class="form-group form-float ">
+                                <div class="form-line">
+                                    <label for="emailAddress" class="form-label">电子邮箱:</label>
+                                    <input type="text" [(ngModel)]="person.emailAddress" required pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{1,})+$" class="validate form-control"
+                                        id="emailAddress" name="emailAddress">
+
+                                </div>
+
+
+                            </div>
+
+
+
+                        </div>
+                    </div>
+
+
+                    <div class="row clearfix">
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+
+                            <div class="form-group form-float ">
+                                <div class="form-line">
+                                    <label for="name" class="form-label">地址:</label>
+                                    <input type="text" [(ngModel)]="person.address" class="validate form-control" id="address" name="address">
+
+                                </div>
+
+
+                            </div>
+
+
+
+                        </div>
+                    </div>
+
+
+
+
+
+
+                </div>
+                <div class="modal-footer">
+                    <button [disabled]="saving" type="button" (click)="close()" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button [disabled]="!createOrEditPersonForm.form.valid||saving" type="submit" class="btn btn-primary">{{l("Save")}}</button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>

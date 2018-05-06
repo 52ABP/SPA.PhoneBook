@@ -8,41 +8,61 @@
 
         <div class="card main-content">
             <div class="header">
-                <h2>
-                    {{l('PhoneBook')}}
-                </h2>
-            </div>
-   
 
 
+                <div class="row clearfix">
+                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                        <h2>
+                            {{l('phonebook')}} ({{people.length}})
+                            <small>联系人列表</small>
+                        </h2>
+                    </div>
 
+                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 align-right ">
+                        <button class="btn btn-primary blue" (click)="createPerson()">
+                            <i class="fa fa-plus"></i>{{l('CreateNewPerson')}}
+                        </button>
+                    </div>
 
-<div class="row clearfix">
-    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-
-        <div class="body">
-            
-            <div class="list-group">
-                <div href="#" class="list-group-item active" *ngFor="let person of people"  >
-                    <h4 class="list-group-item-heading">姓名：{{person.name}}  地址：{{person.address}}</h4>
-                    <p class="list-group-item-text">电子邮箱：{{person.emailAddress}}</p>
                 </div>
+
+                <div class="row">
+
+                </div>
+
+
+
             </div>
-            
 
+
+
+
+            <div class="row clearfix">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+                    <div class="body">
+
+                        <div class="list-group">
+                            <div href="#" class="list-group-item active" *ngFor="let person of people">
+                                <h4 class="list-group-item-heading">姓名：{{person.name}} 地址：{{person.address}}</h4>
+                                <p class="list-group-item-text">电子邮箱：{{person.emailAddress}}</p>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+
+
+
+
+
+                </div>
+
+
+
+            </div>
         </div>
-        
-        
-
-
-
-
-    </div>
-
-
-
-</div>
-</div>
 
 
 
@@ -56,3 +76,5 @@
 
 
 </div>
+
+<app-create-or-edit-person-modal #createOrEditPersonModal (modalSave)="refresh()"></app-create-or-edit-person-modal>

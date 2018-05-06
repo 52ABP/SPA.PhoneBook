@@ -5,9 +5,7 @@
 
 ## 预览效果图
 
-拥有的功能有哪些
-
- 
+拥有的功能有哪些 
 
 ![Angular_PhoneBook_pre](docs/images/readme/Angular_PhoneBook_pre.gif)
 
@@ -37,6 +35,7 @@ ce6f2b8393255e8758f9a980dc6b23b23952b120
 Gist ID: 216964ac1470977bdaf9dd33ee26b6e4
 
 
+
 # 联系我们
 
 
@@ -45,3 +44,11 @@ Gist ID: 216964ac1470977bdaf9dd33ee26b6e4
 
 ![联系我们](http://upload-images.jianshu.io/upload_images/1979022-a6ae2876aeac3cab.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
+
+
+# 常用的命令
+
+生成指定路径的 组件
+`
+  ng generate component persons/create-or-edit-person-modal
+`
