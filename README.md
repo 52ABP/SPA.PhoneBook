@@ -6,6 +6,8 @@
 
 拥有的功能有哪些
 
+ 
+
 ![Angular_PhoneBook_pre](docs/images/readme/Angular_PhoneBook_pre.gif)
 
 
@@ -27,7 +29,11 @@ https://dotnet.myget.org/F/aspnetcore-dev/api/v3/index.json
 update-database
 ```
 
+# github 令牌同步使用 sync 配置
 
+bce44962732071871f682f83312f84528e7f31ce
+
+Gist ID:216964ac1470977bdaf9dd33ee26b6e4
 
 
 # 联系我们
