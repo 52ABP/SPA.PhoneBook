@@ -173,10 +173,17 @@ namespace SPACore.PhoneBook.PhoneBooks.Persons
         public async Task DeletePhoneNumberAsync(EntityDto<long> input)
         {
             var entity = await _phoneNumbeRepository.GetAsync(input.Id);
-            if (entity != null) await _phoneNumbeRepository.DeleteAsync(input.Id);
+            if (entity != null)
+            {
+                await _phoneNumbeRepository.DeleteAsync(entity);
+            }
+            else
+            {
+                throw new UserFriendlyException("该电话号码不存在，请重试");
+
+            }
 
 
-            throw new UserFriendlyException("该ID不存在，请重试");
         }
 
         /// <summary>

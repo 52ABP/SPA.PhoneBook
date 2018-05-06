@@ -2661,6 +2661,7 @@ export class PhoneNumberListDto implements IPhoneNumberListDto {
     type: PhoneNumberListDtoType | undefined;
     personId: number | undefined;
     creationTime: moment.Moment | undefined;
+    readonly typeDescription: string | undefined;
     id: number | undefined;
 
     constructor(data?: IPhoneNumberListDto) {
@@ -2678,6 +2679,7 @@ export class PhoneNumberListDto implements IPhoneNumberListDto {
             this.type = data["type"];
             this.personId = data["personId"];
             this.creationTime = data["creationTime"] ? moment(data["creationTime"].toString()) : <any>undefined;
+            (<any>this).typeDescription = data["typeDescription"];
             this.id = data["id"];
         }
     }
@@ -2695,6 +2697,7 @@ export class PhoneNumberListDto implements IPhoneNumberListDto {
         data["type"] = this.type;
         data["personId"] = this.personId;
         data["creationTime"] = this.creationTime ? this.creationTime.toISOString() : <any>undefined;
+        data["typeDescription"] = this.typeDescription;
         data["id"] = this.id;
         return data; 
     }
@@ -2712,6 +2715,7 @@ export interface IPhoneNumberListDto {
     type: PhoneNumberListDtoType | undefined;
     personId: number | undefined;
     creationTime: moment.Moment | undefined;
+    typeDescription: string | undefined;
     id: number | undefined;
 }
 
@@ -4191,12 +4195,14 @@ export enum PhoneNumberListDtoType {
     _1 = 1, 
     _2 = 2, 
     _3 = 3, 
+    _4 = 4, 
 }
 
 export enum PhoneNumberEditDtoType {
     _1 = 1, 
     _2 = 2, 
     _3 = 3, 
+    _4 = 4, 
 }
 
 export class SwaggerException extends Error {

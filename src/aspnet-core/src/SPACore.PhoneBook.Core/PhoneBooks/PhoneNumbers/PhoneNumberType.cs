@@ -24,6 +24,12 @@ namespace SPACore.PhoneBook.PhoneBooks.PhoneNumbers
         /// </summary>
         [Description("公司")]
 
-        Company = 3
+        Company = 3,
+        /// <summary>
+        /// 商务
+        /// </summary>
+        [Description("商务")]
+
+        Business =4
     }
 }

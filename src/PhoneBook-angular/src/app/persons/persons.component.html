@@ -80,50 +80,55 @@
 
                                 <div *ngIf="person==editingPerson" class="table-responsive">
 
-                                    <thead>
-                                        <tr>
-                                            <th style="width:10%">{{l('Actions')}}</th>
-                                            <th style="width:15%">{{l("Type")}}</th>
-                                            <th style="width:75%">{{l("PhoneNumber")}}</th>
-                                        </tr>
-                                    </thead>
+                                    <table class="table table-hover ">
 
-                                    <tbody>
-                                        <tr *ngFor="let phone of person.phoneNumbers">
 
-                                            <td>
-                                                <button (click)="deletePhoneNumer(phone, person)" class="btn btn-outline-danger m-btn m-btn--icon m-btn--icon-only m-btn--pill">
-                                                    <i class="fa fa-times"></i>
-                                                </button>
-                                            </td>
-                                            <td>{{phone.type}}</td>
+                                        <thead>
+                                            <tr>
+                                                <th style="width:10%">{{l('Actions')}}</th>
+                                                <th style="width:15%">{{l("Type")}}</th>
+                                                <th style="width:75%">{{l("PhoneNumber")}}</th>
+                                            </tr>
+                                        </thead>
 
-                                            <td>{{phone.number}}</td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <button (click)="savePhone()" class="btn btn-sm btn-success">
-                                                    <i class="fa fa-floppy-o"></i>
-                                                </button>
-                                            </td>
-                                            <td>
-                                                <select name="Type" [(ngModel)]="newPhoneNumber.type" class="form-control">
+                                        <tbody>
+                                            <tr *ngFor="let phone of person.phoneNumbers">
 
-                                                    <option *ngFor="let numberType of phonenumberTypeList" [value]=numberType.value>{{numberType.key}}</option>
+                                                <td>
+                                                    <button (click)="deletePhoneNumer(phone, person)" class="btn btn-outline-danger m-btn m-btn--icon m-btn--icon-only m-btn--pill">
+                                                        <i class="fa fa-times"></i>
+                                                    </button>
+                                                </td>
 
-                                                    <!-- <option value="1">移动电话</option>
+
+                                                <td>{{phone.typeDescription}}</td>
+
+                                                <td>{{phone.number}}</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <button (click)="savePhoneNumber()" class="btn btn-sm btn-success">
+                                                        <i class="fa fa-floppy-o"></i>
+                                                    </button>
+                                                </td>
+                                                <td>
+                                                    <select name="Type" [(ngModel)]="newPhoneNumber.type" class="form-control">
+
+                                                        <option *ngFor="let numberType of phonenumberTypeList" [value]=numberType.value>{{numberType.key}}</option>
+
+                                                        <!-- <option value="1">移动电话</option>
                                                         <option value="2">家庭</option>
                                                         <option value="3">公司</option> -->
-                                                </select>
-                                            </td>
-                                            <td>
-                                                <input type="text" name="number" [(ngModel)]="newPhoneNumber.number" class="form-control" />
-                                            </td>
-                                        </tr>
-                                    </tbody>
+                                                    </select>
+                                                </td>
+                                                <td>
+                                                    <input type="text" name="number" [(ngModel)]="newPhoneNumber.number" class="form-control" />
+                                                </td>
+                                            </tr>
+                                        </tbody>
 
 
-
+                                    </table>
                                 </div>
 
 

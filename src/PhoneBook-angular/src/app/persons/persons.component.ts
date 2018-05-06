@@ -138,7 +138,7 @@ export class PersonsComponent extends PagedListingComponentBase<PersonListDto>  
 
       if (isConfirmed) {
 
-        this._personService.deletePerson(phoneNumber.id).subscribe(
+        this._personService.deletePhoneNumberAsync(phoneNumber.id).subscribe(
 
           () => {
             this.notify.success(this.l('SuccessfullyDeleted'));
@@ -180,6 +180,30 @@ export class PersonsComponent extends PagedListingComponentBase<PersonListDto>  
 
 
     })
+
+  }
+
+  /**
+   * 添加电话号码信息
+   *
+   * @memberof PersonsComponent
+   */
+  savePhoneNumber(): void {
+
+
+
+    if (!this.newPhoneNumber.number) {
+      this.message.warn('电话号码不能为空!');
+      return;
+    } else {
+      this._personService.addPhoneNumberAsync(this.newPhoneNumber).subscribe(
+        result => {
+          this.editingPerson.phoneNumbers.push(result);
+          this.newPhoneNumber.number = '';
+          abp.notify.success('信息保存成功');
+        }
+      );
+    }
 
 
 
