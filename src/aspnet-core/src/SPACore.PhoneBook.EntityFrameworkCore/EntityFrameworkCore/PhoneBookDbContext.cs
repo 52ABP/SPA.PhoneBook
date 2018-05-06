@@ -3,6 +3,8 @@ using Abp.Zero.EntityFrameworkCore;
 using SPACore.PhoneBook.Authorization.Roles;
 using SPACore.PhoneBook.Authorization.Users;
 using SPACore.PhoneBook.MultiTenancy;
+using SPACore.PhoneBook.PhoneBooks.Persons;
+using SPACore.PhoneBook.PhoneBooks.PhoneNumbers;
 
 namespace SPACore.PhoneBook.EntityFrameworkCore
 {
@@ -14,5 +16,10 @@ namespace SPACore.PhoneBook.EntityFrameworkCore
             : base(options)
         {
         }
+
+        public DbSet<Person> Persons { get; set; }
+
+
+        public  DbSet<PhoneNumber> PhoneNumbers { get; set; }
     }
 }
