@@ -34,6 +34,7 @@ import { SideBarFooterComponent } from '@app/layout/sidebar-footer.component';
 import { RightSideBarComponent } from '@app/layout/right-sidebar.component';
 import { MaterialInput } from '@shared/directives/material-input.directive';
 import { PersonsComponent } from './persons/persons.component';
+import { CreateOrEditPersonModalComponent } from './persons/create-or-edit-person-modal/create-or-edit-person-modal.component';
 
 @NgModule({
     declarations: [
@@ -55,7 +56,8 @@ import { PersonsComponent } from './persons/persons.component';
         SideBarNavComponent,
         SideBarFooterComponent,
         RightSideBarComponent,
-        PersonsComponent
+        PersonsComponent,
+        CreateOrEditPersonModalComponent
     
     ],
     imports: [
