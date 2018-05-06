@@ -7,6 +7,7 @@ using Abp.Domain.Repositories;
 using Abp.Linq.Extensions;
 
 using System.Linq.Dynamic.Core;
+using Abp.Extensions;
 using Microsoft.EntityFrameworkCore;
 using SPACore.PhoneBook.Persons.Authorization;
 using SPACore.PhoneBook.Persons.Dtos;
@@ -45,12 +46,13 @@ namespace SPACore.PhoneBook.Persons
         public async Task<PagedResultDto<PersonListDto>> GetPagedPersons(GetPersonsInput input)
         {
 
-            var query = _personRepository.GetAll();
+            var query = _personRepository.GetAll().WhereIf(!input.Filter.IsNullOrWhiteSpace(),
+                a=>a.Name.Contains(input.Filter)||a.Address.Contains(input.Filter)||a.EmailAddress.Contains(input.Filter));
             //TODO:根据传入的参数添加过滤条件
             var personCount = await query.CountAsync();
 
             var persons = await query
-                .OrderBy(input.Sorting)
+                .OrderBy(input.Sorting).AsNoTracking()
                 .PageBy(input)
                 .ToListAsync();
 

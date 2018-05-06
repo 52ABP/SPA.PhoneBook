@@ -38,7 +38,15 @@ export class PersonsComponent extends PagedListingComponentBase<PersonListDto>  
 
 
 
-
+  /**
+   * 查询联系人信息
+   *
+   * @protected
+   * @param {PagedRequestDto} request
+   * @param {number} pageNumber
+   * @param {Function} finishedCallback
+   * @memberof PersonsComponent
+   */
   protected list(request: PagedRequestDto, pageNumber: number, finishedCallback: Function): void {
 
     this._personService.getPagedPersons(this.filter, 'Id', request.maxResultCount, request.skipCount).finally(() => {
@@ -51,12 +59,52 @@ export class PersonsComponent extends PagedListingComponentBase<PersonListDto>  
 
 
   }
+
+  /**
+   * 删除联系人
+   *
+   * @protected
+   * @param {PersonListDto} entity
+   * @memberof PersonsComponent
+   */
   protected delete(entity: PersonListDto): void {
-    throw new Error('Method not implemented.');
+    abp.message.confirm('是否确定删除' + entity.name + '的信息', (isConfirmed) => {
+
+      if (isConfirmed) {
+
+        this._personService.deletePerson(entity.id).subscribe(
+
+          () => {
+            abp.notify.info(entity.name + '已被删除');
+            this.refresh();
+          }
+        );
+      }
+
+    });
+
+
+
+
   }
 
 
+  /**
+   * 编辑联系人信息
+   *
+   * @memberof PersonsComponent
+   */
+  editPerson(entity: PersonListDto): void {
 
+    this.CreateOrEditPersonModal.show(entity.id);
+
+  }
+
+  /**
+   * 添加联系人
+   *
+   * @memberof PersonsComponent
+   */
   createPerson(): void {
 
     this.CreateOrEditPersonModal.show();

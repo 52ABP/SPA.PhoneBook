@@ -48,7 +48,12 @@ export class CreateOrEditPersonModalComponent extends AppComponentBase {
 
 
 
-
+  /**
+   * 弹出模态框信息
+   * 
+   * @param {number} [personId] 
+   * @memberof CreateOrEditPersonModalComponent
+   */
   show(personId?: number): void {
 
     this.active = true;
@@ -60,6 +65,12 @@ export class CreateOrEditPersonModalComponent extends AppComponentBase {
 
   }
 
+
+  /**
+   * 处理联系人信息的编辑和添加
+   *
+   * @memberof CreateOrEditPersonModalComponent
+   */
   save(): void {
     const input = new CreateOrUpdatePersonInput();
 
