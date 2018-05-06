@@ -1,6 +1,7 @@
 # SPA.PhoneBook
 基于SPA做的电话薄项目， 前端使用的是  Angular  进行开发
 
+## QQ群： 633751348
 
 ## 预览效果图
 
@@ -31,9 +32,9 @@ update-database
 
 # github 令牌同步使用 sync 配置
 
-bce44962732071871f682f83312f84528e7f31ce
+ce6f2b8393255e8758f9a980dc6b23b23952b120 
 
-Gist ID:216964ac1470977bdaf9dd33ee26b6e4
+Gist ID: 216964ac1470977bdaf9dd33ee26b6e4
 
 
 # 联系我们

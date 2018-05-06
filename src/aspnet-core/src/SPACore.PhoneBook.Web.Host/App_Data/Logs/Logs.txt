@@ -3938,3 +3938,676 @@ INFO  2018-05-06 11:26:03,102 [6    ] ore.Mvc.Internal.ControllerActionInvoker -
 INFO  2018-05-06 11:26:03,104 [11   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action SPACore.PhoneBook.Roles.RoleAppService.GetAll (SPACore.PhoneBook.Application) in 5406.3562ms
 INFO  2018-05-06 11:26:03,160 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 2609.3414ms 200 application/json; charset=utf-8
 INFO  2018-05-06 11:26:03,163 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 6338.9183ms 200 application/json; charset=utf-8
+DEBUG 2018-05-06 11:28:19,443 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2018-05-06 11:28:19,468 [1    ] Abp.Modules.AbpModuleManager             - Found 15 ABP modules in total.
+DEBUG 2018-05-06 11:28:19,510 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SPACore.PhoneBook.Web.Host.Startup.PhoneBookWebHostModule, SPACore.PhoneBook.Web.Host, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-06 11:28:19,514 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SPACore.PhoneBook.PhoneBookWebCoreModule, SPACore.PhoneBook.Web.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-06 11:28:19,515 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SPACore.PhoneBook.PhoneBookApplicationModule, SPACore.PhoneBook.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-06 11:28:19,515 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SPACore.PhoneBook.PhoneBookCoreModule, SPACore.PhoneBook.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-06 11:28:19,515 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.ZeroCore, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-06 11:28:19,516 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-06 11:28:19,516 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-06 11:28:19,516 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-06 11:28:19,517 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SPACore.PhoneBook.EntityFrameworkCore.PhoneBookEntityFrameworkModule, SPACore.PhoneBook.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-06 11:28:19,517 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFrameworkCore.AbpZeroCoreEntityFrameworkCoreModule, Abp.ZeroCore.EntityFrameworkCore, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-06 11:28:19,517 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-06 11:28:19,517 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-06 11:28:19,518 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.AbpAspNetCoreModule, Abp.AspNetCore, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-06 11:28:19,518 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-06 11:28:19,518 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.SignalR.AbpAspNetCoreSignalRModule, Abp.AspNetCore.SignalR, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-06 11:28:19,522 [1    ] Abp.Modules.AbpModuleManager             - 15 modules loaded.
+DEBUG 2018-05-06 11:28:19,611 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-05-06 11:28:19,611 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-05-06 11:28:19,611 [1    ] o.Configuration.LanguageManagementConfig - Converted PhoneBook (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-05-06 11:28:19,611 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-05-06 11:28:20,051 [1    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: SPACore.PhoneBook.EntityFrameworkCore.PhoneBookDbContext, SPACore.PhoneBook.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-06 11:28:20,682 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2018-05-06 11:28:20,760 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2018-05-06 11:28:20,812 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2018-05-06 11:28:20,841 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: PhoneBook
+DEBUG 2018-05-06 11:28:20,873 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2018-05-06 11:28:20,906 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-05-06 11:28:20,958 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 10 classes define auto mapping attributes
+DEBUG 2018-05-06 11:28:20,958 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SPACore.PhoneBook.Models.TokenAuth.ExternalLoginProviderInfoModel
+DEBUG 2018-05-06 11:28:20,962 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SPACore.PhoneBook.Users.Dto.CreateUserDto
+DEBUG 2018-05-06 11:28:20,962 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SPACore.PhoneBook.Users.Dto.UserDto
+DEBUG 2018-05-06 11:28:20,963 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SPACore.PhoneBook.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2018-05-06 11:28:20,963 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SPACore.PhoneBook.Sessions.Dto.UserLoginInfoDto
+DEBUG 2018-05-06 11:28:20,963 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SPACore.PhoneBook.Roles.Dto.CreateRoleDto
+DEBUG 2018-05-06 11:28:20,963 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SPACore.PhoneBook.Roles.Dto.PermissionDto
+DEBUG 2018-05-06 11:28:20,963 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SPACore.PhoneBook.Roles.Dto.RoleDto
+DEBUG 2018-05-06 11:28:20,963 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SPACore.PhoneBook.MultiTenancy.Dto.CreateTenantDto
+DEBUG 2018-05-06 11:28:20,963 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SPACore.PhoneBook.MultiTenancy.Dto.TenantDto
+INFO  2018-05-06 11:28:23,100 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:10747/signalr?enc_auth_token=wNYmO41%2F48SHNstaLVXxHCCre29BZQl1NhC6NM3R3rzpXtPQxVzH6jEzA%2FQhXFN5tu6Fk7pO53uppm1mVXMZgxbyRVz26dnepi%2FFyB6axBY%2B6gq1GL%2BuRQgoiFUCjRN2p8w6LevViwKlHyWZZJZO1DGVSjAi1m2U%2Bog9pkHw9%2FRkp3UZ8A1gKoReYXpvXHc0KFXzGY3aUxaXUOjpNPSTn4LyfFvWqGRq42yefBXGrkBTbBN3h9UXPP%2B25Rfae1rBCQrd8mQ0G3JHpGlVZBMKMD5RSIjWMCe3sPKe05J4ZS4x7ipM9FJHtoJ0Ev%2FfvM08rDbeioKKXNqOF9YqzdChxSnpsH4gsiia6e%2BSRx0RP0vRVsR4wlyxfhLUPp9jvbWpdq%2FmZ48Smdg8IFkLdTqUWh8NEppdCs%2Ft4ytuxfJIgxcwBHvHIbIixFbcBEqeMLd6lGPcJNOqa2P7BOldl8D%2BsVfmOkQILNgpUEePQ8h3IenYCQh47tV%2FCXXN0yRovUhNHu79n%2FFAQOkQeS3Ra74PzlyX6its%2FjOyGEhXyYdi3CGityfrzKXNYqGHQo5BBVwM0RjCFWcybsi4WfwdCySz5ANaWWcPpHGUzDgr88D5IiivELkO1dBfy59f5uvTdLNu3FAlKEXSpYaWZCPBxydTCqQ36cCCEup26603InjW1oPEX5ccrhZnb%2BDMLqNOXYHnorcE6tLFRID%2FxL2ZU80oNE0w2nFTOAgbA46iOEpqJuwO%2BhvoWoCi9PLxIASBwzcrrfk2tnHWBm3UEH1AhGs82wyl9vVZ1Azata7fexMOjuZu7soB8Ic8ltySdQBumJ7wy46qnzZbstRZgVl9k5Kuha1qDTDYuUxuOGp%2F%2FP6bY3ZooQP9FRD774UDEGbg6oJzh3n%2Fs%2FGMe3yyFNaeLSWK1%2F%2FKMCinOCNbffzA3%2BMBoSiifg1FBYBkza%2BZAObCzjvDjOWfquzzK8FgaxCkEP%2BVsyStcWOA%2BXAPi8asDGOghKsbhFXpgiGrR4u%2Bp32Xf5%2FH  
+INFO  2018-05-06 11:28:23,117 [6    ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-05-06 11:28:23,199 [6    ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2018-05-06 11:28:23,204 [6    ] uthentication.JwtBearer.JwtBearerHandler - AuthenticationScheme: JwtBearer was successfully authenticated.
+INFO  2018-05-06 11:28:23,329 [15   ] .Internal.Transports.WebSocketsTransport - Socket opened.
+INFO  2018-05-06 11:28:23,402 [12   ] .AspNetCore.SignalR.HubConnectionContext - Using HubProtocol 'json'.
+DEBUG 2018-05-06 11:28:23,439 [12   ] Abp.AspNetCore.SignalR.Hubs.AbpCommonHub - A client is connected: {"ConnectionId":"9e85f5ba-d15f-4d4c-b854-08045c633233","IpAddress":"::1","TenantId":1,"UserId":2,"ConnectTime":"2018-05-06T11:28:23.4268011+08:00","Properties":{}}
+INFO  2018-05-06 11:30:17,477 [13   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:10747/swagger/  
+INFO  2018-05-06 11:30:17,620 [13   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/index.html'. Physical path: 'N/A'
+INFO  2018-05-06 11:30:17,628 [13   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 150.5211ms 200 text/html
+INFO  2018-05-06 11:30:17,662 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:10747/swagger/css/typography.css  
+INFO  2018-05-06 11:30:17,668 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:10747/swagger/css/reset.css  
+INFO  2018-05-06 11:30:17,668 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:10747/swagger/lib/object-assign-pollyfill.js  
+INFO  2018-05-06 11:30:17,668 [5    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:10747/swagger/lib/jquery.slideto.min.js  
+INFO  2018-05-06 11:30:17,669 [11   ] NetCore.StaticFiles.StaticFileMiddleware - The file /css/typography.css was not modified
+INFO  2018-05-06 11:30:17,669 [5    ] NetCore.StaticFiles.StaticFileMiddleware - The file /lib/jquery.slideto.min.js was not modified
+INFO  2018-05-06 11:30:17,669 [10   ] NetCore.StaticFiles.StaticFileMiddleware - The file /css/reset.css was not modified
+INFO  2018-05-06 11:30:17,669 [12   ] NetCore.StaticFiles.StaticFileMiddleware - The file /lib/object-assign-pollyfill.js was not modified
+INFO  2018-05-06 11:30:17,670 [15   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:10747/swagger/css/screen.css  
+INFO  2018-05-06 11:30:17,671 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 9.274ms 304 text/css
+INFO  2018-05-06 11:30:17,672 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 3.9109ms 304 text/css
+INFO  2018-05-06 11:30:17,672 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 3.8142ms 304 application/javascript
+INFO  2018-05-06 11:30:17,672 [15   ] NetCore.StaticFiles.StaticFileMiddleware - The file /css/screen.css was not modified
+INFO  2018-05-06 11:30:17,672 [15   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 2.0505ms 304 text/css
+INFO  2018-05-06 11:30:17,672 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:10747/swagger/lib/jquery-1.8.0.min.js  
+INFO  2018-05-06 11:30:17,672 [5    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 3.8857ms 304 application/javascript
+INFO  2018-05-06 11:30:17,673 [6    ] NetCore.StaticFiles.StaticFileMiddleware - The file /lib/jquery-1.8.0.min.js was not modified
+INFO  2018-05-06 11:30:17,674 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1.591ms 304 application/javascript
+INFO  2018-05-06 11:30:17,686 [14   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:10747/swagger/swagger-ui.min.js  
+INFO  2018-05-06 11:30:17,686 [13   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:10747/swagger/lib/backbone-min.js  
+INFO  2018-05-06 11:30:17,686 [5    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:10747/swagger/lib/lodash.min.js  
+INFO  2018-05-06 11:30:17,686 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:10747/swagger/lib/jquery.wiggle.min.js  
+INFO  2018-05-06 11:30:17,687 [14   ] NetCore.StaticFiles.StaticFileMiddleware - The file /swagger-ui.min.js was not modified
+INFO  2018-05-06 11:30:17,687 [13   ] NetCore.StaticFiles.StaticFileMiddleware - The file /lib/backbone-min.js was not modified
+INFO  2018-05-06 11:30:17,687 [14   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1.2291ms 304 application/javascript
+INFO  2018-05-06 11:30:17,687 [13   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1.3499ms 304 application/javascript
+INFO  2018-05-06 11:30:17,687 [5    ] NetCore.StaticFiles.StaticFileMiddleware - The file /lib/lodash.min.js was not modified
+INFO  2018-05-06 11:30:17,687 [12   ] NetCore.StaticFiles.StaticFileMiddleware - The file /lib/jquery.wiggle.min.js was not modified
+INFO  2018-05-06 11:30:17,687 [5    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1.61ms 304 application/javascript
+INFO  2018-05-06 11:30:17,687 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 0.8754ms 304 application/javascript
+INFO  2018-05-06 11:30:17,689 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:10747/swagger/lib/jquery.ba-bbq.min.js  
+INFO  2018-05-06 11:30:17,690 [10   ] NetCore.StaticFiles.StaticFileMiddleware - The file /lib/jquery.ba-bbq.min.js was not modified
+INFO  2018-05-06 11:30:17,690 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1.7812ms 304 application/javascript
+INFO  2018-05-06 11:30:17,691 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:10747/swagger/lib/handlebars-4.0.5.js  
+INFO  2018-05-06 11:30:17,692 [12   ] NetCore.StaticFiles.StaticFileMiddleware - The file /lib/handlebars-4.0.5.js was not modified
+INFO  2018-05-06 11:30:17,693 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 2.9969ms 304 application/javascript
+INFO  2018-05-06 11:30:17,696 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:10747/swagger/lib/jsoneditor.min.js  
+INFO  2018-05-06 11:30:17,696 [6    ] NetCore.StaticFiles.StaticFileMiddleware - The file /lib/jsoneditor.min.js was not modified
+INFO  2018-05-06 11:30:17,697 [14   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:10747/swagger/lib/highlight.9.1.0.pack.js  
+INFO  2018-05-06 11:30:17,697 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1.1998ms 304 application/javascript
+INFO  2018-05-06 11:30:17,697 [14   ] NetCore.StaticFiles.StaticFileMiddleware - The file /lib/highlight.9.1.0.pack.js was not modified
+INFO  2018-05-06 11:30:17,697 [14   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 0.8332ms 304 application/javascript
+INFO  2018-05-06 11:30:17,698 [15   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:10747/swagger/lib/swagger-oauth.js  
+INFO  2018-05-06 11:30:17,699 [14   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:10747/swagger/lib/highlight.9.1.0.pack_extended.js  
+INFO  2018-05-06 11:30:17,699 [15   ] NetCore.StaticFiles.StaticFileMiddleware - The file /lib/swagger-oauth.js was not modified
+INFO  2018-05-06 11:30:17,700 [15   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1.6357ms 304 application/javascript
+INFO  2018-05-06 11:30:17,701 [14   ] NetCore.StaticFiles.StaticFileMiddleware - The file /lib/highlight.9.1.0.pack_extended.js was not modified
+INFO  2018-05-06 11:30:17,701 [14   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 2.4823ms 304 application/javascript
+INFO  2018-05-06 11:30:17,703 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:10747/swagger/lib/marked.js  
+INFO  2018-05-06 11:30:17,705 [12   ] NetCore.StaticFiles.StaticFileMiddleware - The file /lib/marked.js was not modified
+INFO  2018-05-06 11:30:17,706 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 2.8627ms 304 application/javascript
+INFO  2018-05-06 11:30:17,716 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:10747/swagger/images/logo_small.png  
+INFO  2018-05-06 11:30:17,718 [11   ] NetCore.StaticFiles.StaticFileMiddleware - The file /images/logo_small.png was not modified
+INFO  2018-05-06 11:30:17,719 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 2.4576ms 304 image/png
+INFO  2018-05-06 11:30:17,848 [13   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:10747/swagger/css/print.css  
+INFO  2018-05-06 11:30:17,849 [13   ] NetCore.StaticFiles.StaticFileMiddleware - The file /css/print.css was not modified
+INFO  2018-05-06 11:30:17,850 [13   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1.5385ms 304 text/css
+INFO  2018-05-06 11:30:18,088 [14   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:10747/swagger/v1/swagger.json  
+INFO  2018-05-06 11:30:18,341 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:10747/swagger/images/favicon-32x32.png  
+INFO  2018-05-06 11:30:18,342 [12   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/images/favicon-32x32.png'. Physical path: 'N/A'
+INFO  2018-05-06 11:30:18,343 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1.8182ms 200 image/png
+INFO  2018-05-06 11:30:18,350 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:10747/swagger/images/favicon-16x16.png  
+INFO  2018-05-06 11:30:18,351 [11   ] NetCore.StaticFiles.StaticFileMiddleware - The file /images/favicon-16x16.png was not modified
+INFO  2018-05-06 11:30:18,351 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 0.9746ms 304 image/png
+INFO  2018-05-06 11:30:18,355 [14   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 267.9766ms 200 application/json
+INFO  2018-05-06 11:30:18,636 [5    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:10747/swagger/ui/abp.js?_=1525577418631  
+INFO  2018-05-06 11:30:18,636 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:10747/swagger/ui/on-complete.js?_=1525577418632  
+INFO  2018-05-06 11:30:18,637 [6    ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/swagger/ui/on-complete.js'. Physical path: 'D:\CodeManager\Github_Code\SPA.PhoneBook\src\aspnet-core\src\SPACore.PhoneBook.Web.Host\wwwroot\swagger\ui\on-complete.js'
+INFO  2018-05-06 11:30:18,637 [5    ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/swagger/ui/abp.js'. Physical path: 'D:\CodeManager\Github_Code\SPA.PhoneBook\src\aspnet-core\src\SPACore.PhoneBook.Web.Host\wwwroot\swagger\ui\abp.js'
+INFO  2018-05-06 11:30:18,639 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 3.0504ms 200 application/javascript
+INFO  2018-05-06 11:30:18,639 [13   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 3.1341ms 200 application/javascript
+INFO  2018-05-06 11:30:18,748 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:10747/swagger/images/throbber.gif  
+INFO  2018-05-06 11:30:18,749 [10   ] NetCore.StaticFiles.StaticFileMiddleware - The file /images/throbber.gif was not modified
+INFO  2018-05-06 11:30:18,750 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1.9194ms 304 image/gif
+INFO  2018-05-06 11:30:18,753 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:10747/swagger/images/explorer_icons.png  
+INFO  2018-05-06 11:30:18,754 [10   ] NetCore.StaticFiles.StaticFileMiddleware - The file /images/explorer_icons.png was not modified
+INFO  2018-05-06 11:30:18,755 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1.885ms 304 image/png
+INFO  2018-05-06 11:31:26,830 [5    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:10747/swagger/ui/abp.js?_=1525577486820  
+INFO  2018-05-06 11:31:26,830 [30   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:10747/swagger/ui/on-complete.js?_=1525577486820  
+INFO  2018-05-06 11:31:26,830 [5    ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/swagger/ui/abp.js'. Physical path: 'D:\CodeManager\Github_Code\SPA.PhoneBook\src\aspnet-core\src\SPACore.PhoneBook.Web.Host\wwwroot\swagger\ui\abp.js'
+INFO  2018-05-06 11:31:26,830 [30   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/swagger/ui/on-complete.js'. Physical path: 'D:\CodeManager\Github_Code\SPA.PhoneBook\src\aspnet-core\src\SPACore.PhoneBook.Web.Host\wwwroot\swagger\ui\on-complete.js'
+INFO  2018-05-06 11:31:26,831 [5    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1.0132ms 200 application/javascript
+INFO  2018-05-06 11:31:26,831 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1.0317ms 200 application/javascript
+INFO  2018-05-06 11:31:29,327 [32   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:10747/swagger/ui/abp.js?_=1525577489320  
+INFO  2018-05-06 11:31:29,327 [31   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:10747/swagger/ui/on-complete.js?_=1525577489320  
+INFO  2018-05-06 11:31:29,328 [32   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/swagger/ui/abp.js'. Physical path: 'D:\CodeManager\Github_Code\SPA.PhoneBook\src\aspnet-core\src\SPACore.PhoneBook.Web.Host\wwwroot\swagger\ui\abp.js'
+INFO  2018-05-06 11:31:29,328 [31   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/swagger/ui/on-complete.js'. Physical path: 'D:\CodeManager\Github_Code\SPA.PhoneBook\src\aspnet-core\src\SPACore.PhoneBook.Web.Host\wwwroot\swagger\ui\on-complete.js'
+INFO  2018-05-06 11:31:29,328 [32   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1.0255ms 200 application/javascript
+INFO  2018-05-06 11:31:29,328 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1.1365ms 200 application/javascript
+INFO  2018-05-06 11:56:28,248 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:10747/swagger/v1/swagger.json  
+INFO  2018-05-06 11:56:28,293 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 45.5797ms 200 application/json
+DEBUG 2018-05-06 12:06:10,305 [26   ] Abp.AspNetCore.SignalR.Hubs.AbpCommonHub - A client is disconnected: 9e85f5ba-d15f-4d4c-b854-08045c633233
+INFO  2018-05-06 12:06:10,328 [29   ] .Internal.Transports.WebSocketsTransport - Socket closed.
+INFO  2018-05-06 12:06:10,337 [15   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 2267262.9332ms 101 
+INFO  2018-05-06 12:06:14,087 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 OPTIONS http://localhost:10747/AbpUserConfiguration/GetAll  
+INFO  2018-05-06 12:06:14,089 [10   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-05-06 12:06:14,097 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 9.6215ms 204 
+INFO  2018-05-06 12:06:14,105 [26   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:10747/AbpUserConfiguration/GetAll application/json 
+INFO  2018-05-06 12:06:14,106 [26   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-05-06 12:06:14,109 [26   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2018-05-06 12:06:14,109 [26   ] uthentication.JwtBearer.JwtBearerHandler - AuthenticationScheme: JwtBearer was successfully authenticated.
+INFO  2018-05-06 12:06:14,276 [30   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 OPTIONS http://localhost:10747/AbpUserConfiguration/GetAll  
+INFO  2018-05-06 12:06:14,276 [30   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-05-06 12:06:14,276 [30   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 0.6929ms 204 
+INFO  2018-05-06 12:06:14,374 [15   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:10747/AbpUserConfiguration/GetAll application/json 
+INFO  2018-05-06 12:06:14,374 [15   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-05-06 12:06:14,375 [15   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2018-05-06 12:06:14,376 [15   ] uthentication.JwtBearer.JwtBearerHandler - AuthenticationScheme: JwtBearer was successfully authenticated.
+INFO  2018-05-06 12:06:15,289 [12   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-05-06 12:06:15,289 [15   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-05-06 12:06:15,366 [15   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Abp.AspNetCore.Mvc.Controllers.AbpUserConfigurationController.GetAll (Abp.AspNetCore) with arguments ((null)) - ModelState is Valid
+INFO  2018-05-06 12:06:15,366 [12   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Abp.AspNetCore.Mvc.Controllers.AbpUserConfigurationController.GetAll (Abp.AspNetCore) with arguments ((null)) - ModelState is Valid
+INFO  2018-05-06 12:06:16,179 [29   ] matters.Json.Internal.JsonResultExecutor - Executing JsonResult, writing value Abp.Web.Models.AjaxResponse.
+INFO  2018-05-06 12:06:16,179 [12   ] matters.Json.Internal.JsonResultExecutor - Executing JsonResult, writing value Abp.Web.Models.AjaxResponse.
+INFO  2018-05-06 12:06:16,250 [29   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Abp.AspNetCore.Mvc.Controllers.AbpUserConfigurationController.GetAll (Abp.AspNetCore) in 960.5462ms
+INFO  2018-05-06 12:06:16,250 [12   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Abp.AspNetCore.Mvc.Controllers.AbpUserConfigurationController.GetAll (Abp.AspNetCore) in 960.5462ms
+INFO  2018-05-06 12:06:16,250 [29   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1876.1018ms 200 application/json; charset=utf-8
+INFO  2018-05-06 12:06:16,250 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 2144.9441ms 200 application/json; charset=utf-8
+INFO  2018-05-06 12:06:16,271 [30   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 OPTIONS http://localhost:10747/api/services/app/Session/GetCurrentLoginInformations  
+INFO  2018-05-06 12:06:16,271 [30   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-05-06 12:06:16,271 [30   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 0.6497ms 204 
+INFO  2018-05-06 12:06:16,272 [47   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 OPTIONS http://localhost:10747/api/services/app/Session/GetCurrentLoginInformations  
+INFO  2018-05-06 12:06:16,273 [47   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-05-06 12:06:16,273 [47   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 0.4775ms 204 
+INFO  2018-05-06 12:06:16,283 [49   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:10747/api/services/app/Session/GetCurrentLoginInformations application/json 
+INFO  2018-05-06 12:06:16,283 [49   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-05-06 12:06:16,284 [49   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2018-05-06 12:06:16,284 [49   ] uthentication.JwtBearer.JwtBearerHandler - AuthenticationScheme: JwtBearer was successfully authenticated.
+INFO  2018-05-06 12:06:16,285 [3    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:10747/api/services/app/Session/GetCurrentLoginInformations application/json 
+INFO  2018-05-06 12:06:16,286 [3    ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-05-06 12:06:16,288 [3    ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2018-05-06 12:06:16,289 [3    ] uthentication.JwtBearer.JwtBearerHandler - AuthenticationScheme: JwtBearer was successfully authenticated.
+INFO  2018-05-06 12:06:16,302 [49   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-05-06 12:06:16,302 [3    ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-05-06 12:06:16,402 [3    ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method SPACore.PhoneBook.Sessions.SessionAppService.GetCurrentLoginInformations (SPACore.PhoneBook.Application) with arguments ((null)) - ModelState is Valid
+INFO  2018-05-06 12:06:16,402 [49   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method SPACore.PhoneBook.Sessions.SessionAppService.GetCurrentLoginInformations (SPACore.PhoneBook.Application) with arguments ((null)) - ModelState is Valid
+INFO  2018-05-06 12:06:16,507 [15   ] etCore.Mvc.Internal.ObjectResultExecutor - Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+INFO  2018-05-06 12:06:16,507 [48   ] etCore.Mvc.Internal.ObjectResultExecutor - Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+INFO  2018-05-06 12:06:16,518 [15   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action SPACore.PhoneBook.Sessions.SessionAppService.GetCurrentLoginInformations (SPACore.PhoneBook.Application) in 216.2179ms
+INFO  2018-05-06 12:06:16,518 [48   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action SPACore.PhoneBook.Sessions.SessionAppService.GetCurrentLoginInformations (SPACore.PhoneBook.Application) in 216.2179ms
+INFO  2018-05-06 12:06:16,518 [15   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 235.7412ms 200 application/json; charset=utf-8
+INFO  2018-05-06 12:06:16,518 [48   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 233.2876ms 200 application/json; charset=utf-8
+INFO  2018-05-06 12:06:17,972 [5    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 OPTIONS http://localhost:10747/api/services/app/Role/GetAll?SkipCount=0&MaxResultCount=10  
+INFO  2018-05-06 12:06:17,972 [5    ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-05-06 12:06:17,973 [5    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 0.9931ms 204 
+INFO  2018-05-06 12:06:17,982 [30   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 OPTIONS http://localhost:10747/api/services/app/Role/GetAllPermissions  
+INFO  2018-05-06 12:06:17,983 [30   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-05-06 12:06:17,983 [30   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 0.6096ms 204 
+INFO  2018-05-06 12:06:17,991 [3    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 OPTIONS http://localhost:10747/api/services/app/Role/GetAllPermissions  
+INFO  2018-05-06 12:06:17,992 [3    ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-05-06 12:06:17,992 [3    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 0.5603ms 204 
+INFO  2018-05-06 12:06:18,051 [48   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:10747/signalr?enc_auth_token=wNYmO41%2F48SHNstaLVXxHCCre29BZQl1NhC6NM3R3rzpXtPQxVzH6jEzA%2FQhXFN5tu6Fk7pO53uppm1mVXMZgxbyRVz26dnepi%2FFyB6axBY%2B6gq1GL%2BuRQgoiFUCjRN2p8w6LevViwKlHyWZZJZO1DGVSjAi1m2U%2Bog9pkHw9%2FRkp3UZ8A1gKoReYXpvXHc0KFXzGY3aUxaXUOjpNPSTn4LyfFvWqGRq42yefBXGrkBTbBN3h9UXPP%2B25Rfae1rBCQrd8mQ0G3JHpGlVZBMKMD5RSIjWMCe3sPKe05J4ZS4x7ipM9FJHtoJ0Ev%2FfvM08rDbeioKKXNqOF9YqzdChxSnpsH4gsiia6e%2BSRx0RP0vRVsR4wlyxfhLUPp9jvbWpdq%2FmZ48Smdg8IFkLdTqUWh8NEppdCs%2Ft4ytuxfJIgxcwBHvHIbIixFbcBEqeMLd6lGPcJNOqa2P7BOldl8D%2BsVfmOkQILNgpUEePQ8h3IenYCQh47tV%2FCXXN0yRovUhNHu79n%2FFAQOkQeS3Ra74PzlyX6its%2FjOyGEhXyYdi3CGityfrzKXNYqGHQo5BBVwM0RjCFWcybsi4WfwdCySz5ANaWWcPpHGUzDgr88D5IiivELkO1dBfy59f5uvTdLNu3FAlKEXSpYaWZCPBxydTCqQ36cCCEup26603InjW1oPEX5ccrhZnb%2BDMLqNOXYHnorcE6tLFRID%2FxL2ZU80oNE0w2nFTOAgbA46iOEpqJuwO%2BhvoWoCi9PLxIASBwzcrrfk2tnHWBm3UEH1AhGs82wyl9vVZ1Azata7fexMOjuZu7soB8Ic8ltySdQBumJ7wy46qnzZbstRZgVl9k5Kuha1qDTDYuUxuOGp%2F%2FP6bY3ZooQP9FRD774UDEGbg6oJzh3n%2Fs%2FGMe3yyFNaeLSWK1%2F%2FKMCinOCNbffzA3%2BMBoSiifg1FBYBkza%2BZAObCzjvDjOWfquzzK8FgaxCkEP%2BVsyStcWOA%2BXAPi8asDGOghKsbhFXpgiGrR4u%2Bp32Xf5%2FH  
+INFO  2018-05-06 12:06:18,052 [48   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-05-06 12:06:18,056 [48   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2018-05-06 12:06:18,056 [48   ] uthentication.JwtBearer.JwtBearerHandler - AuthenticationScheme: JwtBearer was successfully authenticated.
+INFO  2018-05-06 12:06:18,057 [48   ] .Internal.Transports.WebSocketsTransport - Socket opened.
+INFO  2018-05-06 12:06:18,223 [46   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:10747/signalr?enc_auth_token=wNYmO41%2F48SHNstaLVXxHCCre29BZQl1NhC6NM3R3rzpXtPQxVzH6jEzA%2FQhXFN5tu6Fk7pO53uppm1mVXMZgxbyRVz26dnepi%2FFyB6axBY%2B6gq1GL%2BuRQgoiFUCjRN2p8w6LevViwKlHyWZZJZO1DGVSjAi1m2U%2Bog9pkHw9%2FRkp3UZ8A1gKoReYXpvXHc0KFXzGY3aUxaXUOjpNPSTn4LyfFvWqGRq42yefBXGrkBTbBN3h9UXPP%2B25Rfae1rBCQrd8mQ0G3JHpGlVZBMKMD5RSIjWMCe3sPKe05J4ZS4x7ipM9FJHtoJ0Ev%2FfvM08rDbeioKKXNqOF9YqzdChxSnpsH4gsiia6e%2BSRx0RP0vRVsR4wlyxfhLUPp9jvbWpdq%2FmZ48Smdg8IFkLdTqUWh8NEppdCs%2Ft4ytuxfJIgxcwBHvHIbIixFbcBEqeMLd6lGPcJNOqa2P7BOldl8D%2BsVfmOkQILNgpUEePQ8h3IenYCQh47tV%2FCXXN0yRovUhNHu79n%2FFAQOkQeS3Ra74PzlyX6its%2FjOyGEhXyYdi3CGityfrzKXNYqGHQo5BBVwM0RjCFWcybsi4WfwdCySz5ANaWWcPpHGUzDgr88D5IiivELkO1dBfy59f5uvTdLNu3FAlKEXSpYaWZCPBxydTCqQ36cCCEup26603InjW1oPEX5ccrhZnb%2BDMLqNOXYHnorcE6tLFRID%2FxL2ZU80oNE0w2nFTOAgbA46iOEpqJuwO%2BhvoWoCi9PLxIASBwzcrrfk2tnHWBm3UEH1AhGs82wyl9vVZ1Azata7fexMOjuZu7soB8Ic8ltySdQBumJ7wy46qnzZbstRZgVl9k5Kuha1qDTDYuUxuOGp%2F%2FP6bY3ZooQP9FRD774UDEGbg6oJzh3n%2Fs%2FGMe3yyFNaeLSWK1%2F%2FKMCinOCNbffzA3%2BMBoSiifg1FBYBkza%2BZAObCzjvDjOWfquzzK8FgaxCkEP%2BVsyStcWOA%2BXAPi8asDGOghKsbhFXpgiGrR4u%2Bp32Xf5%2FH  
+INFO  2018-05-06 12:06:18,223 [46   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-05-06 12:06:18,227 [46   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2018-05-06 12:06:18,227 [46   ] uthentication.JwtBearer.JwtBearerHandler - AuthenticationScheme: JwtBearer was successfully authenticated.
+INFO  2018-05-06 12:06:18,228 [46   ] .Internal.Transports.WebSocketsTransport - Socket opened.
+INFO  2018-05-06 12:06:18,241 [5    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:10747/api/services/app/Role/GetAllPermissions application/json 
+INFO  2018-05-06 12:06:18,242 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:10747/api/services/app/Role/GetAll?SkipCount=0&MaxResultCount=10 application/json 
+INFO  2018-05-06 12:06:18,242 [5    ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-05-06 12:06:18,242 [10   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-05-06 12:06:18,243 [10   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2018-05-06 12:06:18,243 [30   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:10747/api/services/app/Role/GetAllPermissions application/json 
+INFO  2018-05-06 12:06:18,243 [10   ] uthentication.JwtBearer.JwtBearerHandler - AuthenticationScheme: JwtBearer was successfully authenticated.
+INFO  2018-05-06 12:06:18,243 [30   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-05-06 12:06:18,243 [5    ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2018-05-06 12:06:18,243 [5    ] uthentication.JwtBearer.JwtBearerHandler - AuthenticationScheme: JwtBearer was successfully authenticated.
+INFO  2018-05-06 12:06:18,244 [30   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2018-05-06 12:06:18,245 [30   ] uthentication.JwtBearer.JwtBearerHandler - AuthenticationScheme: JwtBearer was successfully authenticated.
+INFO  2018-05-06 12:06:18,261 [30   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-05-06 12:06:18,263 [5    ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-05-06 12:06:18,282 [10   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-05-06 12:06:18,314 [46   ] .AspNetCore.SignalR.HubConnectionContext - Using HubProtocol 'json'.
+DEBUG 2018-05-06 12:06:18,316 [46   ] Abp.AspNetCore.SignalR.Hubs.AbpCommonHub - A client is connected: {"ConnectionId":"4ea0269b-2881-43bf-8175-b25b2013de70","IpAddress":"::1","TenantId":1,"UserId":2,"ConnectTime":"2018-05-06T12:06:18.3157024+08:00","Properties":{}}
+INFO  2018-05-06 12:06:18,372 [48   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method SPACore.PhoneBook.Roles.RoleAppService.GetAllPermissions (SPACore.PhoneBook.Application) with arguments ((null)) - ModelState is Valid
+INFO  2018-05-06 12:06:18,372 [30   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method SPACore.PhoneBook.Roles.RoleAppService.GetAllPermissions (SPACore.PhoneBook.Application) with arguments ((null)) - ModelState is Valid
+DEBUG 2018-05-06 12:06:18,384 [46   ] Abp.AspNetCore.SignalR.Hubs.AbpCommonHub - A client is registered: 4ea0269b-2881-43bf-8175-b25b2013de70
+WARN  2018-05-06 12:06:18,402 [48   ] naries.DictionaryBasedLocalizationSource - Can not find 'Pages' in localization source 'PhoneBook'!
+WARN  2018-05-06 12:06:18,402 [30   ] naries.DictionaryBasedLocalizationSource - Can not find 'Pages' in localization source 'PhoneBook'!
+WARN  2018-05-06 12:06:18,406 [48   ] naries.DictionaryBasedLocalizationSource - Can not find 'Person' in localization source 'PhoneBook'!
+WARN  2018-05-06 12:06:18,406 [30   ] naries.DictionaryBasedLocalizationSource - Can not find 'Person' in localization source 'PhoneBook'!
+WARN  2018-05-06 12:06:18,407 [48   ] naries.DictionaryBasedLocalizationSource - Can not find 'CreatePerson' in localization source 'PhoneBook'!
+WARN  2018-05-06 12:06:18,407 [30   ] naries.DictionaryBasedLocalizationSource - Can not find 'CreatePerson' in localization source 'PhoneBook'!
+WARN  2018-05-06 12:06:18,408 [48   ] naries.DictionaryBasedLocalizationSource - Can not find 'EditPerson' in localization source 'PhoneBook'!
+WARN  2018-05-06 12:06:18,408 [30   ] naries.DictionaryBasedLocalizationSource - Can not find 'EditPerson' in localization source 'PhoneBook'!
+WARN  2018-05-06 12:06:18,409 [48   ] naries.DictionaryBasedLocalizationSource - Can not find 'DeletePerson' in localization source 'PhoneBook'!
+WARN  2018-05-06 12:06:18,409 [30   ] naries.DictionaryBasedLocalizationSource - Can not find 'DeletePerson' in localization source 'PhoneBook'!
+WARN  2018-05-06 12:06:18,410 [48   ] naries.DictionaryBasedLocalizationSource - Can not find 'BatchDeletePersons' in localization source 'PhoneBook'!
+WARN  2018-05-06 12:06:18,410 [30   ] naries.DictionaryBasedLocalizationSource - Can not find 'BatchDeletePersons' in localization source 'PhoneBook'!
+INFO  2018-05-06 12:06:18,421 [48   ] etCore.Mvc.Internal.ObjectResultExecutor - Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+INFO  2018-05-06 12:06:18,423 [45   ] etCore.Mvc.Internal.ObjectResultExecutor - Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+INFO  2018-05-06 12:06:18,428 [48   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action SPACore.PhoneBook.Roles.RoleAppService.GetAllPermissions (SPACore.PhoneBook.Application) in 167.3944ms
+INFO  2018-05-06 12:06:18,428 [48   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 185.7791ms 200 application/json; charset=utf-8
+INFO  2018-05-06 12:06:18,429 [45   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action SPACore.PhoneBook.Roles.RoleAppService.GetAllPermissions (SPACore.PhoneBook.Application) in 165.6518ms
+INFO  2018-05-06 12:06:18,429 [45   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 187.951ms 200 application/json; charset=utf-8
+INFO  2018-05-06 12:06:18,434 [5    ] .AspNetCore.SignalR.HubConnectionContext - Using HubProtocol 'json'.
+DEBUG 2018-05-06 12:06:18,435 [5    ] Abp.AspNetCore.SignalR.Hubs.AbpCommonHub - A client is connected: {"ConnectionId":"2e1916f1-00c8-4d2f-95ba-71ea054b2c5f","IpAddress":"::1","TenantId":1,"UserId":2,"ConnectTime":"2018-05-06T12:06:18.4350711+08:00","Properties":{}}
+DEBUG 2018-05-06 12:06:18,456 [5    ] Abp.AspNetCore.SignalR.Hubs.AbpCommonHub - A client is registered: 2e1916f1-00c8-4d2f-95ba-71ea054b2c5f
+INFO  2018-05-06 12:06:18,467 [10   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method SPACore.PhoneBook.Roles.RoleAppService.GetAll (SPACore.PhoneBook.Application) with arguments (Abp.Application.Services.Dto.PagedResultRequestDto) - ModelState is Valid
+INFO  2018-05-06 12:06:18,724 [3    ] etCore.Mvc.Internal.ObjectResultExecutor - Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+INFO  2018-05-06 12:06:18,731 [3    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action SPACore.PhoneBook.Roles.RoleAppService.GetAll (SPACore.PhoneBook.Application) in 448.4713ms
+INFO  2018-05-06 12:06:18,731 [3    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 489.4765ms 200 application/json; charset=utf-8
+INFO  2018-05-06 12:06:59,262 [26   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 OPTIONS http://localhost:10747/api/services/app/Role/GetAll?SkipCount=0&MaxResultCount=10  
+INFO  2018-05-06 12:06:59,262 [26   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-05-06 12:06:59,263 [26   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 0.5999ms 204 
+INFO  2018-05-06 12:06:59,266 [49   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 OPTIONS http://localhost:10747/api/services/app/Role/GetAllPermissions  
+INFO  2018-05-06 12:06:59,266 [49   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-05-06 12:06:59,267 [49   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 0.7474ms 204 
+INFO  2018-05-06 12:06:59,277 [45   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 OPTIONS http://localhost:10747/api/services/app/Role/GetAllPermissions  
+INFO  2018-05-06 12:06:59,278 [45   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-05-06 12:06:59,278 [45   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 0.7983ms 204 
+INFO  2018-05-06 12:06:59,299 [5    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:10747/api/services/app/Role/GetAll?SkipCount=0&MaxResultCount=10 application/json 
+INFO  2018-05-06 12:06:59,299 [30   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:10747/api/services/app/Role/GetAllPermissions application/json 
+INFO  2018-05-06 12:06:59,299 [5    ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-05-06 12:06:59,299 [30   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-05-06 12:06:59,300 [5    ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2018-05-06 12:06:59,300 [5    ] uthentication.JwtBearer.JwtBearerHandler - AuthenticationScheme: JwtBearer was successfully authenticated.
+INFO  2018-05-06 12:06:59,300 [30   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2018-05-06 12:06:59,301 [30   ] uthentication.JwtBearer.JwtBearerHandler - AuthenticationScheme: JwtBearer was successfully authenticated.
+INFO  2018-05-06 12:06:59,301 [26   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:10747/api/services/app/Role/GetAllPermissions application/json 
+INFO  2018-05-06 12:06:59,301 [26   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-05-06 12:06:59,302 [26   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2018-05-06 12:06:59,302 [26   ] uthentication.JwtBearer.JwtBearerHandler - AuthenticationScheme: JwtBearer was successfully authenticated.
+INFO  2018-05-06 12:06:59,308 [30   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-05-06 12:06:59,309 [26   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-05-06 12:06:59,311 [5    ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-05-06 12:06:59,318 [5    ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method SPACore.PhoneBook.Roles.RoleAppService.GetAll (SPACore.PhoneBook.Application) with arguments (Abp.Application.Services.Dto.PagedResultRequestDto) - ModelState is Valid
+INFO  2018-05-06 12:06:59,320 [3    ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method SPACore.PhoneBook.Roles.RoleAppService.GetAllPermissions (SPACore.PhoneBook.Application) with arguments ((null)) - ModelState is Valid
+INFO  2018-05-06 12:06:59,320 [29   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method SPACore.PhoneBook.Roles.RoleAppService.GetAllPermissions (SPACore.PhoneBook.Application) with arguments ((null)) - ModelState is Valid
+WARN  2018-05-06 12:06:59,323 [29   ] naries.DictionaryBasedLocalizationSource - Can not find 'Pages' in localization source 'PhoneBook'!
+WARN  2018-05-06 12:06:59,323 [3    ] naries.DictionaryBasedLocalizationSource - Can not find 'Pages' in localization source 'PhoneBook'!
+WARN  2018-05-06 12:06:59,324 [29   ] naries.DictionaryBasedLocalizationSource - Can not find 'Person' in localization source 'PhoneBook'!
+WARN  2018-05-06 12:06:59,325 [3    ] naries.DictionaryBasedLocalizationSource - Can not find 'Person' in localization source 'PhoneBook'!
+WARN  2018-05-06 12:06:59,325 [29   ] naries.DictionaryBasedLocalizationSource - Can not find 'CreatePerson' in localization source 'PhoneBook'!
+WARN  2018-05-06 12:06:59,325 [3    ] naries.DictionaryBasedLocalizationSource - Can not find 'CreatePerson' in localization source 'PhoneBook'!
+WARN  2018-05-06 12:06:59,326 [29   ] naries.DictionaryBasedLocalizationSource - Can not find 'EditPerson' in localization source 'PhoneBook'!
+WARN  2018-05-06 12:06:59,326 [3    ] naries.DictionaryBasedLocalizationSource - Can not find 'EditPerson' in localization source 'PhoneBook'!
+WARN  2018-05-06 12:06:59,326 [29   ] naries.DictionaryBasedLocalizationSource - Can not find 'DeletePerson' in localization source 'PhoneBook'!
+WARN  2018-05-06 12:06:59,326 [3    ] naries.DictionaryBasedLocalizationSource - Can not find 'DeletePerson' in localization source 'PhoneBook'!
+WARN  2018-05-06 12:06:59,327 [29   ] naries.DictionaryBasedLocalizationSource - Can not find 'BatchDeletePersons' in localization source 'PhoneBook'!
+WARN  2018-05-06 12:06:59,327 [3    ] naries.DictionaryBasedLocalizationSource - Can not find 'BatchDeletePersons' in localization source 'PhoneBook'!
+INFO  2018-05-06 12:06:59,343 [26   ] etCore.Mvc.Internal.ObjectResultExecutor - Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+INFO  2018-05-06 12:06:59,343 [26   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action SPACore.PhoneBook.Roles.RoleAppService.GetAllPermissions (SPACore.PhoneBook.Application) in 34.0494ms
+INFO  2018-05-06 12:06:59,343 [26   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 42.2877ms 200 application/json; charset=utf-8
+INFO  2018-05-06 12:06:59,349 [45   ] etCore.Mvc.Internal.ObjectResultExecutor - Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+INFO  2018-05-06 12:06:59,349 [45   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action SPACore.PhoneBook.Roles.RoleAppService.GetAllPermissions (SPACore.PhoneBook.Application) in 41.2894ms
+INFO  2018-05-06 12:06:59,350 [45   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 50.4494ms 200 application/json; charset=utf-8
+INFO  2018-05-06 12:06:59,384 [12   ] etCore.Mvc.Internal.ObjectResultExecutor - Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+INFO  2018-05-06 12:06:59,385 [12   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action SPACore.PhoneBook.Roles.RoleAppService.GetAll (SPACore.PhoneBook.Application) in 74.0903ms
+INFO  2018-05-06 12:06:59,385 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 85.9382ms 200 application/json; charset=utf-8
+INFO  2018-05-06 12:06:59,610 [39   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 OPTIONS http://localhost:10747/api/services/app/User/GetAll?SkipCount=0&MaxResultCount=10  
+INFO  2018-05-06 12:06:59,610 [39   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-05-06 12:06:59,611 [39   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 0.7613ms 204 
+INFO  2018-05-06 12:06:59,614 [39   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 OPTIONS http://localhost:10747/api/services/app/User/GetRoles  
+INFO  2018-05-06 12:06:59,614 [39   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-05-06 12:06:59,615 [39   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1.2892ms 204 
+INFO  2018-05-06 12:06:59,642 [30   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:10747/api/services/app/User/GetAll?SkipCount=0&MaxResultCount=10 application/json 
+INFO  2018-05-06 12:06:59,642 [45   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:10747/api/services/app/User/GetRoles application/json 
+INFO  2018-05-06 12:06:59,643 [45   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-05-06 12:06:59,643 [30   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-05-06 12:06:59,644 [30   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2018-05-06 12:06:59,644 [45   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2018-05-06 12:06:59,644 [30   ] uthentication.JwtBearer.JwtBearerHandler - AuthenticationScheme: JwtBearer was successfully authenticated.
+INFO  2018-05-06 12:06:59,644 [45   ] uthentication.JwtBearer.JwtBearerHandler - AuthenticationScheme: JwtBearer was successfully authenticated.
+INFO  2018-05-06 12:06:59,662 [30   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-05-06 12:06:59,667 [45   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-05-06 12:06:59,739 [29   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method SPACore.PhoneBook.Users.UserAppService.GetRoles (SPACore.PhoneBook.Application) with arguments ((null)) - ModelState is Valid
+INFO  2018-05-06 12:06:59,741 [30   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method SPACore.PhoneBook.Users.UserAppService.GetAll (SPACore.PhoneBook.Application) with arguments (Abp.Application.Services.Dto.PagedResultRequestDto) - ModelState is Valid
+INFO  2018-05-06 12:06:59,783 [29   ] etCore.Mvc.Internal.ObjectResultExecutor - Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+INFO  2018-05-06 12:06:59,785 [29   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action SPACore.PhoneBook.Users.UserAppService.GetRoles (SPACore.PhoneBook.Application) in 118.2039ms
+INFO  2018-05-06 12:06:59,786 [29   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 143.0051ms 200 application/json; charset=utf-8
+INFO  2018-05-06 12:06:59,930 [29   ] etCore.Mvc.Internal.ObjectResultExecutor - Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+INFO  2018-05-06 12:06:59,942 [29   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action SPACore.PhoneBook.Users.UserAppService.GetAll (SPACore.PhoneBook.Application) in 280.7159ms
+INFO  2018-05-06 12:06:59,943 [29   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 300.359ms 200 application/json; charset=utf-8
+INFO  2018-05-06 12:07:00,433 [26   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:10747/api/services/app/Role/GetAll?SkipCount=0&MaxResultCount=10 application/json 
+INFO  2018-05-06 12:07:00,433 [26   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-05-06 12:07:00,433 [30   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:10747/api/services/app/Role/GetAllPermissions application/json 
+INFO  2018-05-06 12:07:00,434 [26   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2018-05-06 12:07:00,434 [26   ] uthentication.JwtBearer.JwtBearerHandler - AuthenticationScheme: JwtBearer was successfully authenticated.
+INFO  2018-05-06 12:07:00,434 [30   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-05-06 12:07:00,438 [30   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2018-05-06 12:07:00,438 [30   ] uthentication.JwtBearer.JwtBearerHandler - AuthenticationScheme: JwtBearer was successfully authenticated.
+INFO  2018-05-06 12:07:00,439 [5    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:10747/api/services/app/Role/GetAllPermissions application/json 
+INFO  2018-05-06 12:07:00,439 [5    ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-05-06 12:07:00,440 [5    ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2018-05-06 12:07:00,440 [5    ] uthentication.JwtBearer.JwtBearerHandler - AuthenticationScheme: JwtBearer was successfully authenticated.
+INFO  2018-05-06 12:07:00,442 [26   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-05-06 12:07:00,445 [26   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method SPACore.PhoneBook.Roles.RoleAppService.GetAll (SPACore.PhoneBook.Application) with arguments (Abp.Application.Services.Dto.PagedResultRequestDto) - ModelState is Valid
+INFO  2018-05-06 12:07:00,447 [30   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-05-06 12:07:00,448 [5    ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-05-06 12:07:00,454 [49   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method SPACore.PhoneBook.Roles.RoleAppService.GetAllPermissions (SPACore.PhoneBook.Application) with arguments ((null)) - ModelState is Valid
+INFO  2018-05-06 12:07:00,455 [5    ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method SPACore.PhoneBook.Roles.RoleAppService.GetAllPermissions (SPACore.PhoneBook.Application) with arguments ((null)) - ModelState is Valid
+WARN  2018-05-06 12:07:00,457 [49   ] naries.DictionaryBasedLocalizationSource - Can not find 'Pages' in localization source 'PhoneBook'!
+WARN  2018-05-06 12:07:00,458 [49   ] naries.DictionaryBasedLocalizationSource - Can not find 'Person' in localization source 'PhoneBook'!
+WARN  2018-05-06 12:07:00,458 [5    ] naries.DictionaryBasedLocalizationSource - Can not find 'Pages' in localization source 'PhoneBook'!
+WARN  2018-05-06 12:07:00,459 [49   ] naries.DictionaryBasedLocalizationSource - Can not find 'CreatePerson' in localization source 'PhoneBook'!
+WARN  2018-05-06 12:07:00,459 [49   ] naries.DictionaryBasedLocalizationSource - Can not find 'EditPerson' in localization source 'PhoneBook'!
+WARN  2018-05-06 12:07:00,460 [5    ] naries.DictionaryBasedLocalizationSource - Can not find 'Person' in localization source 'PhoneBook'!
+WARN  2018-05-06 12:07:00,460 [49   ] naries.DictionaryBasedLocalizationSource - Can not find 'DeletePerson' in localization source 'PhoneBook'!
+WARN  2018-05-06 12:07:00,460 [5    ] naries.DictionaryBasedLocalizationSource - Can not find 'CreatePerson' in localization source 'PhoneBook'!
+WARN  2018-05-06 12:07:00,460 [49   ] naries.DictionaryBasedLocalizationSource - Can not find 'BatchDeletePersons' in localization source 'PhoneBook'!
+WARN  2018-05-06 12:07:00,461 [5    ] naries.DictionaryBasedLocalizationSource - Can not find 'EditPerson' in localization source 'PhoneBook'!
+WARN  2018-05-06 12:07:00,461 [5    ] naries.DictionaryBasedLocalizationSource - Can not find 'DeletePerson' in localization source 'PhoneBook'!
+WARN  2018-05-06 12:07:00,462 [5    ] naries.DictionaryBasedLocalizationSource - Can not find 'BatchDeletePersons' in localization source 'PhoneBook'!
+INFO  2018-05-06 12:07:00,465 [29   ] etCore.Mvc.Internal.ObjectResultExecutor - Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+INFO  2018-05-06 12:07:00,465 [29   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action SPACore.PhoneBook.Roles.RoleAppService.GetAllPermissions (SPACore.PhoneBook.Application) in 18.5358ms
+INFO  2018-05-06 12:07:00,466 [29   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 32.4883ms 200 application/json; charset=utf-8
+INFO  2018-05-06 12:07:00,467 [5    ] etCore.Mvc.Internal.ObjectResultExecutor - Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+INFO  2018-05-06 12:07:00,467 [5    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action SPACore.PhoneBook.Roles.RoleAppService.GetAllPermissions (SPACore.PhoneBook.Application) in 18.671ms
+INFO  2018-05-06 12:07:00,467 [5    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 28.2756ms 200 application/json; charset=utf-8
+INFO  2018-05-06 12:07:00,476 [26   ] etCore.Mvc.Internal.ObjectResultExecutor - Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+INFO  2018-05-06 12:07:00,477 [26   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action SPACore.PhoneBook.Roles.RoleAppService.GetAll (SPACore.PhoneBook.Application) in 34.6411ms
+INFO  2018-05-06 12:07:00,477 [26   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 44.4442ms 200 application/json; charset=utf-8
+DEBUG 2018-05-06 12:07:14,019 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2018-05-06 12:07:14,048 [1    ] Abp.Modules.AbpModuleManager             - Found 15 ABP modules in total.
+DEBUG 2018-05-06 12:07:14,095 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SPACore.PhoneBook.Web.Host.Startup.PhoneBookWebHostModule, SPACore.PhoneBook.Web.Host, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-06 12:07:14,099 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SPACore.PhoneBook.PhoneBookWebCoreModule, SPACore.PhoneBook.Web.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-06 12:07:14,099 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SPACore.PhoneBook.PhoneBookApplicationModule, SPACore.PhoneBook.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-06 12:07:14,100 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SPACore.PhoneBook.PhoneBookCoreModule, SPACore.PhoneBook.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-06 12:07:14,100 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.ZeroCore, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-06 12:07:14,100 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-06 12:07:14,100 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-06 12:07:14,101 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-06 12:07:14,101 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SPACore.PhoneBook.EntityFrameworkCore.PhoneBookEntityFrameworkModule, SPACore.PhoneBook.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-06 12:07:14,102 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFrameworkCore.AbpZeroCoreEntityFrameworkCoreModule, Abp.ZeroCore.EntityFrameworkCore, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-06 12:07:14,102 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-06 12:07:14,102 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-06 12:07:14,103 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.AbpAspNetCoreModule, Abp.AspNetCore, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-06 12:07:14,103 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-06 12:07:14,103 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.SignalR.AbpAspNetCoreSignalRModule, Abp.AspNetCore.SignalR, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-06 12:07:14,107 [1    ] Abp.Modules.AbpModuleManager             - 15 modules loaded.
+DEBUG 2018-05-06 12:07:14,219 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-05-06 12:07:14,220 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-05-06 12:07:14,220 [1    ] o.Configuration.LanguageManagementConfig - Converted PhoneBook (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-05-06 12:07:14,220 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-05-06 12:07:14,947 [1    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: SPACore.PhoneBook.EntityFrameworkCore.PhoneBookDbContext, SPACore.PhoneBook.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-06 12:07:15,729 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2018-05-06 12:07:15,867 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2018-05-06 12:07:15,954 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2018-05-06 12:07:15,983 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: PhoneBook
+DEBUG 2018-05-06 12:07:16,017 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2018-05-06 12:07:16,068 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-05-06 12:07:16,127 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 10 classes define auto mapping attributes
+DEBUG 2018-05-06 12:07:16,127 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SPACore.PhoneBook.Models.TokenAuth.ExternalLoginProviderInfoModel
+DEBUG 2018-05-06 12:07:16,131 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SPACore.PhoneBook.Users.Dto.CreateUserDto
+DEBUG 2018-05-06 12:07:16,132 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SPACore.PhoneBook.Users.Dto.UserDto
+DEBUG 2018-05-06 12:07:16,132 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SPACore.PhoneBook.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2018-05-06 12:07:16,132 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SPACore.PhoneBook.Sessions.Dto.UserLoginInfoDto
+DEBUG 2018-05-06 12:07:16,132 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SPACore.PhoneBook.Roles.Dto.CreateRoleDto
+DEBUG 2018-05-06 12:07:16,132 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SPACore.PhoneBook.Roles.Dto.PermissionDto
+DEBUG 2018-05-06 12:07:16,132 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SPACore.PhoneBook.Roles.Dto.RoleDto
+DEBUG 2018-05-06 12:07:16,132 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SPACore.PhoneBook.MultiTenancy.Dto.CreateTenantDto
+DEBUG 2018-05-06 12:07:16,132 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SPACore.PhoneBook.MultiTenancy.Dto.TenantDto
+INFO  2018-05-06 12:07:18,924 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 OPTIONS http://localhost:10747/api/services/app/Role/Get?Id=3  
+INFO  2018-05-06 12:07:18,924 [13   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 OPTIONS http://localhost:10747/api/services/app/Role/Get?Id=3  
+INFO  2018-05-06 12:07:18,925 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:10747/signalr?enc_auth_token=wNYmO41%2F48SHNstaLVXxHCCre29BZQl1NhC6NM3R3rzpXtPQxVzH6jEzA%2FQhXFN5tu6Fk7pO53uppm1mVXMZgxbyRVz26dnepi%2FFyB6axBY%2B6gq1GL%2BuRQgoiFUCjRN2p8w6LevViwKlHyWZZJZO1DGVSjAi1m2U%2Bog9pkHw9%2FRkp3UZ8A1gKoReYXpvXHc0KFXzGY3aUxaXUOjpNPSTn4LyfFvWqGRq42yefBXGrkBTbBN3h9UXPP%2B25Rfae1rBCQrd8mQ0G3JHpGlVZBMKMD5RSIjWMCe3sPKe05J4ZS4x7ipM9FJHtoJ0Ev%2FfvM08rDbeioKKXNqOF9YqzdChxSnpsH4gsiia6e%2BSRx0RP0vRVsR4wlyxfhLUPp9jvbWpdq%2FmZ48Smdg8IFkLdTqUWh8NEppdCs%2Ft4ytuxfJIgxcwBHvHIbIixFbcBEqeMLd6lGPcJNOqa2P7BOldl8D%2BsVfmOkQILNgpUEePQ8h3IenYCQh47tV%2FCXXN0yRovUhNHu79n%2FFAQOkQeS3Ra74PzlyX6its%2FjOyGEhXyYdi3CGityfrzKXNYqGHQo5BBVwM0RjCFWcybsi4WfwdCySz5ANaWWcPpHGUzDgr88D5IiivELkO1dBfy59f5uvTdLNu3FAlKEXSpYaWZCPBxydTCqQ36cCCEup26603InjW1oPEX5ccrhZnb%2BDMLqNOXYHnorcE6tLFRID%2FxL2ZU80oNE0w2nFTOAgbA46iOEpqJuwO%2BhvoWoCi9PLxIASBwzcrrfk2tnHWBm3UEH1AhGs82wyl9vVZ1Azata7fexMOjuZu7soB8Ic8ltySdQBumJ7wy46qnzZbstRZgVl9k5Kuha1qDTDYuUxuOGp%2F%2FP6bY3ZooQP9FRD774UDEGbg6oJzh3n%2Fs%2FGMe3yyFNaeLSWK1%2F%2FKMCinOCNbffzA3%2BMBoSiifg1FBYBkza%2BZAObCzjvDjOWfquzzK8FgaxCkEP%2BVsyStcWOA%2BXAPi8asDGOghKsbhFXpgiGrR4u%2Bp32Xf5%2FH  
+INFO  2018-05-06 12:07:18,925 [15   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:10747/  
+INFO  2018-05-06 12:07:18,925 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:10747/signalr?enc_auth_token=wNYmO41%2F48SHNstaLVXxHCCre29BZQl1NhC6NM3R3rzpXtPQxVzH6jEzA%2FQhXFN5tu6Fk7pO53uppm1mVXMZgxbyRVz26dnepi%2FFyB6axBY%2B6gq1GL%2BuRQgoiFUCjRN2p8w6LevViwKlHyWZZJZO1DGVSjAi1m2U%2Bog9pkHw9%2FRkp3UZ8A1gKoReYXpvXHc0KFXzGY3aUxaXUOjpNPSTn4LyfFvWqGRq42yefBXGrkBTbBN3h9UXPP%2B25Rfae1rBCQrd8mQ0G3JHpGlVZBMKMD5RSIjWMCe3sPKe05J4ZS4x7ipM9FJHtoJ0Ev%2FfvM08rDbeioKKXNqOF9YqzdChxSnpsH4gsiia6e%2BSRx0RP0vRVsR4wlyxfhLUPp9jvbWpdq%2FmZ48Smdg8IFkLdTqUWh8NEppdCs%2Ft4ytuxfJIgxcwBHvHIbIixFbcBEqeMLd6lGPcJNOqa2P7BOldl8D%2BsVfmOkQILNgpUEePQ8h3IenYCQh47tV%2FCXXN0yRovUhNHu79n%2FFAQOkQeS3Ra74PzlyX6its%2FjOyGEhXyYdi3CGityfrzKXNYqGHQo5BBVwM0RjCFWcybsi4WfwdCySz5ANaWWcPpHGUzDgr88D5IiivELkO1dBfy59f5uvTdLNu3FAlKEXSpYaWZCPBxydTCqQ36cCCEup26603InjW1oPEX5ccrhZnb%2BDMLqNOXYHnorcE6tLFRID%2FxL2ZU80oNE0w2nFTOAgbA46iOEpqJuwO%2BhvoWoCi9PLxIASBwzcrrfk2tnHWBm3UEH1AhGs82wyl9vVZ1Azata7fexMOjuZu7soB8Ic8ltySdQBumJ7wy46qnzZbstRZgVl9k5Kuha1qDTDYuUxuOGp%2F%2FP6bY3ZooQP9FRD774UDEGbg6oJzh3n%2Fs%2FGMe3yyFNaeLSWK1%2F%2FKMCinOCNbffzA3%2BMBoSiifg1FBYBkza%2BZAObCzjvDjOWfquzzK8FgaxCkEP%2BVsyStcWOA%2BXAPi8asDGOghKsbhFXpgiGrR4u%2Bp32Xf5%2FH  
+INFO  2018-05-06 12:07:18,947 [12   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-05-06 12:07:18,947 [6    ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-05-06 12:07:18,947 [13   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-05-06 12:07:18,947 [10   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-05-06 12:07:18,955 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 60.3064ms 204 
+INFO  2018-05-06 12:07:18,955 [13   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 59.5682ms 204 
+INFO  2018-05-06 12:07:18,972 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:10747/api/services/app/Role/Get?Id=3 application/json 
+INFO  2018-05-06 12:07:18,972 [5    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:10747/api/services/app/Role/Get?Id=3 application/json 
+INFO  2018-05-06 12:07:18,972 [11   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-05-06 12:07:18,972 [5    ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-05-06 12:07:19,064 [11   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2018-05-06 12:07:19,064 [6    ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2018-05-06 12:07:19,064 [10   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2018-05-06 12:07:19,064 [5    ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2018-05-06 12:07:19,073 [6    ] uthentication.JwtBearer.JwtBearerHandler - AuthenticationScheme: JwtBearer was successfully authenticated.
+INFO  2018-05-06 12:07:19,073 [5    ] uthentication.JwtBearer.JwtBearerHandler - AuthenticationScheme: JwtBearer was successfully authenticated.
+INFO  2018-05-06 12:07:19,073 [11   ] uthentication.JwtBearer.JwtBearerHandler - AuthenticationScheme: JwtBearer was successfully authenticated.
+INFO  2018-05-06 12:07:19,073 [10   ] uthentication.JwtBearer.JwtBearerHandler - AuthenticationScheme: JwtBearer was successfully authenticated.
+INFO  2018-05-06 12:07:19,232 [13   ] .Internal.Transports.WebSocketsTransport - Socket opened.
+INFO  2018-05-06 12:07:19,232 [25   ] .Internal.Transports.WebSocketsTransport - Socket opened.
+INFO  2018-05-06 12:07:19,344 [10   ] .AspNetCore.SignalR.HubConnectionContext - Using HubProtocol 'json'.
+INFO  2018-05-06 12:07:19,344 [6    ] .AspNetCore.SignalR.HubConnectionContext - Using HubProtocol 'json'.
+DEBUG 2018-05-06 12:07:19,399 [10   ] Abp.AspNetCore.SignalR.Hubs.AbpCommonHub - A client is connected: {"ConnectionId":"6d610801-9109-46ce-9ed7-f1a16151ee4b","IpAddress":"::1","TenantId":1,"UserId":2,"ConnectTime":"2018-05-06T12:07:19.3834065+08:00","Properties":{}}
+DEBUG 2018-05-06 12:07:19,399 [6    ] Abp.AspNetCore.SignalR.Hubs.AbpCommonHub - A client is connected: {"ConnectionId":"2c80e5d6-0852-41b3-bb05-523a5e19ee5b","IpAddress":"127.0.0.1","TenantId":1,"UserId":2,"ConnectTime":"2018-05-06T12:07:19.383408+08:00","Properties":{}}
+INFO  2018-05-06 12:07:20,029 [12   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-05-06 12:07:20,029 [14   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-05-06 12:07:20,255 [12   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method SPACore.PhoneBook.Roles.RoleAppService.Get (SPACore.PhoneBook.Application) with arguments (Abp.Application.Services.Dto.EntityDto`1[System.Int32]) - ModelState is Valid
+INFO  2018-05-06 12:07:20,255 [14   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method SPACore.PhoneBook.Roles.RoleAppService.Get (SPACore.PhoneBook.Application) with arguments (Abp.Application.Services.Dto.EntityDto`1[System.Int32]) - ModelState is Valid
+INFO  2018-05-06 12:07:20,410 [15   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method SPACore.PhoneBook.Web.Host.Controllers.HomeController.Index (SPACore.PhoneBook.Web.Host) with arguments ((null)) - ModelState is Valid
+INFO  2018-05-06 12:07:20,533 [10   ] Core.Mvc.Internal.RedirectResultExecutor - Executing RedirectResult, redirecting to /swagger.
+INFO  2018-05-06 12:07:20,542 [10   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action SPACore.PhoneBook.Web.Host.Controllers.HomeController.Index (SPACore.PhoneBook.Web.Host) in 533.3203ms
+INFO  2018-05-06 12:07:20,553 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1658.8645ms 302 
+INFO  2018-05-06 12:07:20,568 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:10747/swagger/  
+INFO  2018-05-06 12:07:20,613 [6    ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/index.html'. Physical path: 'N/A'
+INFO  2018-05-06 12:07:20,627 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 58.9477ms 200 text/html
+INFO  2018-05-06 12:07:20,687 [25   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:10747/swagger/css/typography.css  
+INFO  2018-05-06 12:07:20,694 [25   ] NetCore.StaticFiles.StaticFileMiddleware - The file /css/typography.css was not modified
+INFO  2018-05-06 12:07:20,696 [25   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 8.9512ms 304 text/css
+INFO  2018-05-06 12:07:20,696 [25   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:10747/swagger/css/reset.css  
+INFO  2018-05-06 12:07:20,697 [25   ] NetCore.StaticFiles.StaticFileMiddleware - The file /css/reset.css was not modified
+INFO  2018-05-06 12:07:20,698 [25   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1.2712ms 304 text/css
+INFO  2018-05-06 12:07:20,698 [15   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:10747/swagger/css/screen.css  
+INFO  2018-05-06 12:07:20,699 [15   ] NetCore.StaticFiles.StaticFileMiddleware - The file /css/screen.css was not modified
+INFO  2018-05-06 12:07:20,699 [15   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1.0861ms 304 text/css
+INFO  2018-05-06 12:07:20,703 [5    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:10747/swagger/lib/jquery.slideto.min.js  
+INFO  2018-05-06 12:07:20,704 [25   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:10747/swagger/lib/jquery-1.8.0.min.js  
+INFO  2018-05-06 12:07:20,704 [5    ] NetCore.StaticFiles.StaticFileMiddleware - The file /lib/jquery.slideto.min.js was not modified
+INFO  2018-05-06 12:07:20,704 [5    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1.0702ms 304 application/javascript
+INFO  2018-05-06 12:07:20,705 [25   ] NetCore.StaticFiles.StaticFileMiddleware - The file /lib/jquery-1.8.0.min.js was not modified
+INFO  2018-05-06 12:07:20,705 [25   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1.7107ms 304 application/javascript
+INFO  2018-05-06 12:07:20,711 [13   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:10747/swagger/lib/object-assign-pollyfill.js  
+INFO  2018-05-06 12:07:20,713 [13   ] NetCore.StaticFiles.StaticFileMiddleware - The file /lib/object-assign-pollyfill.js was not modified
+INFO  2018-05-06 12:07:20,714 [13   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 2.7193ms 304 application/javascript
+INFO  2018-05-06 12:07:20,721 [25   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:10747/swagger/lib/jquery.wiggle.min.js  
+INFO  2018-05-06 12:07:20,722 [25   ] NetCore.StaticFiles.StaticFileMiddleware - The file /lib/jquery.wiggle.min.js was not modified
+INFO  2018-05-06 12:07:20,723 [25   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1.6583ms 304 application/javascript
+INFO  2018-05-06 12:07:20,723 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:10747/swagger/lib/handlebars-4.0.5.js  
+INFO  2018-05-06 12:07:20,724 [6    ] NetCore.StaticFiles.StaticFileMiddleware - The file /lib/handlebars-4.0.5.js was not modified
+INFO  2018-05-06 12:07:20,724 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1.3118ms 304 application/javascript
+INFO  2018-05-06 12:07:20,726 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:10747/swagger/lib/jquery.ba-bbq.min.js  
+INFO  2018-05-06 12:07:20,727 [25   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:10747/swagger/swagger-ui.min.js  
+INFO  2018-05-06 12:07:20,727 [6    ] NetCore.StaticFiles.StaticFileMiddleware - The file /lib/jquery.ba-bbq.min.js was not modified
+INFO  2018-05-06 12:07:20,727 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1.4871ms 304 application/javascript
+INFO  2018-05-06 12:07:20,728 [25   ] NetCore.StaticFiles.StaticFileMiddleware - The file /swagger-ui.min.js was not modified
+INFO  2018-05-06 12:07:20,728 [25   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1.6861ms 304 application/javascript
+INFO  2018-05-06 12:07:20,731 [13   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:10747/swagger/lib/lodash.min.js  
+INFO  2018-05-06 12:07:20,733 [13   ] NetCore.StaticFiles.StaticFileMiddleware - The file /lib/lodash.min.js was not modified
+INFO  2018-05-06 12:07:20,736 [13   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 3.5151ms 304 application/javascript
+INFO  2018-05-06 12:07:20,741 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:10747/swagger/lib/highlight.9.1.0.pack.js  
+INFO  2018-05-06 12:07:20,744 [10   ] NetCore.StaticFiles.StaticFileMiddleware - The file /lib/highlight.9.1.0.pack.js was not modified
+INFO  2018-05-06 12:07:20,744 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 2.8072ms 304 application/javascript
+INFO  2018-05-06 12:07:20,746 [5    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:10747/swagger/lib/jsoneditor.min.js  
+INFO  2018-05-06 12:07:20,747 [5    ] NetCore.StaticFiles.StaticFileMiddleware - The file /lib/jsoneditor.min.js was not modified
+INFO  2018-05-06 12:07:20,747 [15   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:10747/swagger/lib/marked.js  
+INFO  2018-05-06 12:07:20,747 [5    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1.2861ms 304 application/javascript
+INFO  2018-05-06 12:07:20,748 [15   ] NetCore.StaticFiles.StaticFileMiddleware - The file /lib/marked.js was not modified
+INFO  2018-05-06 12:07:20,748 [15   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1.2985ms 304 application/javascript
+INFO  2018-05-06 12:07:20,755 [13   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:10747/swagger/lib/swagger-oauth.js  
+INFO  2018-05-06 12:07:20,759 [13   ] NetCore.StaticFiles.StaticFileMiddleware - The file /lib/swagger-oauth.js was not modified
+INFO  2018-05-06 12:07:20,759 [13   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 5.0295ms 304 application/javascript
+INFO  2018-05-06 12:07:20,760 [13   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:10747/swagger/lib/backbone-min.js  
+INFO  2018-05-06 12:07:20,761 [13   ] NetCore.StaticFiles.StaticFileMiddleware - The file /lib/backbone-min.js was not modified
+INFO  2018-05-06 12:07:20,761 [13   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1.6023ms 304 application/javascript
+INFO  2018-05-06 12:07:20,762 [13   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:10747/swagger/lib/highlight.9.1.0.pack_extended.js  
+INFO  2018-05-06 12:07:20,763 [13   ] NetCore.StaticFiles.StaticFileMiddleware - The file /lib/highlight.9.1.0.pack_extended.js was not modified
+INFO  2018-05-06 12:07:20,763 [13   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1.3401ms 304 application/javascript
+INFO  2018-05-06 12:07:20,775 [13   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:10747/swagger/images/logo_small.png  
+INFO  2018-05-06 12:07:20,777 [13   ] NetCore.StaticFiles.StaticFileMiddleware - The file /images/logo_small.png was not modified
+INFO  2018-05-06 12:07:20,777 [13   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 2.579ms 304 image/png
+INFO  2018-05-06 12:07:20,956 [10   ] etCore.Mvc.Internal.ObjectResultExecutor - Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+INFO  2018-05-06 12:07:20,956 [6    ] etCore.Mvc.Internal.ObjectResultExecutor - Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+INFO  2018-05-06 12:07:20,985 [6    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action SPACore.PhoneBook.Roles.RoleAppService.Get (SPACore.PhoneBook.Application) in 955.8133ms
+INFO  2018-05-06 12:07:20,985 [10   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action SPACore.PhoneBook.Roles.RoleAppService.Get (SPACore.PhoneBook.Application) in 955.8133ms
+INFO  2018-05-06 12:07:20,989 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 2017.4748ms 200 application/json; charset=utf-8
+INFO  2018-05-06 12:07:20,990 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 2016.7607ms 200 application/json; charset=utf-8
+INFO  2018-05-06 12:07:21,054 [13   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:10747/swagger/css/print.css  
+INFO  2018-05-06 12:07:21,055 [13   ] NetCore.StaticFiles.StaticFileMiddleware - The file /css/print.css was not modified
+INFO  2018-05-06 12:07:21,055 [13   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1.2213ms 304 text/css
+INFO  2018-05-06 12:07:21,377 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:10747/swagger/v1/swagger.json  
+INFO  2018-05-06 12:07:21,672 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 294.6592ms 200 application/json
+INFO  2018-05-06 12:07:22,109 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:10747/swagger/ui/on-complete.js?_=1525579642103  
+INFO  2018-05-06 12:07:22,109 [13   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:10747/swagger/ui/abp.js?_=1525579642102  
+INFO  2018-05-06 12:07:22,110 [11   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/swagger/ui/on-complete.js'. Physical path: 'D:\CodeManager\Github_Code\SPA.PhoneBook\src\aspnet-core\src\SPACore.PhoneBook.Web.Host\wwwroot\swagger\ui\on-complete.js'
+INFO  2018-05-06 12:07:22,110 [13   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/swagger/ui/abp.js'. Physical path: 'D:\CodeManager\Github_Code\SPA.PhoneBook\src\aspnet-core\src\SPACore.PhoneBook.Web.Host\wwwroot\swagger\ui\abp.js'
+INFO  2018-05-06 12:07:22,114 [15   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 4.7169ms 200 application/javascript
+INFO  2018-05-06 12:07:22,114 [25   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 4.6917ms 200 application/javascript
+INFO  2018-05-06 12:07:25,629 [15   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 OPTIONS http://localhost:10747/api/services/app/Role/Get?Id=3  
+INFO  2018-05-06 12:07:25,629 [15   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-05-06 12:07:25,629 [15   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 0.4287ms 204 
+INFO  2018-05-06 12:07:25,643 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:10747/api/services/app/Role/Get?Id=3 application/json 
+INFO  2018-05-06 12:07:25,643 [6    ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-05-06 12:07:25,644 [6    ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2018-05-06 12:07:25,644 [6    ] uthentication.JwtBearer.JwtBearerHandler - AuthenticationScheme: JwtBearer was successfully authenticated.
+INFO  2018-05-06 12:07:25,656 [6    ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-05-06 12:07:25,660 [6    ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method SPACore.PhoneBook.Roles.RoleAppService.Get (SPACore.PhoneBook.Application) with arguments (Abp.Application.Services.Dto.EntityDto`1[System.Int32]) - ModelState is Valid
+INFO  2018-05-06 12:07:25,692 [6    ] etCore.Mvc.Internal.ObjectResultExecutor - Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+INFO  2018-05-06 12:07:25,692 [6    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action SPACore.PhoneBook.Roles.RoleAppService.Get (SPACore.PhoneBook.Application) in 36.2846ms
+INFO  2018-05-06 12:07:25,692 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 49.9651ms 200 application/json; charset=utf-8
+INFO  2018-05-06 12:07:30,349 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 OPTIONS http://localhost:10747/api/services/app/Role/Update  
+INFO  2018-05-06 12:07:30,349 [10   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-05-06 12:07:30,349 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 0.4014ms 204 
+INFO  2018-05-06 12:07:30,364 [14   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 PUT http://localhost:10747/api/services/app/Role/Update application/json 297
+INFO  2018-05-06 12:07:30,365 [14   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-05-06 12:07:30,365 [14   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2018-05-06 12:07:30,366 [14   ] uthentication.JwtBearer.JwtBearerHandler - AuthenticationScheme: JwtBearer was successfully authenticated.
+INFO  2018-05-06 12:07:30,377 [14   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-05-06 12:07:30,430 [11   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method SPACore.PhoneBook.Roles.RoleAppService.Update (SPACore.PhoneBook.Application) with arguments (SPACore.PhoneBook.Roles.Dto.RoleDto) - ModelState is Valid
+INFO  2018-05-06 12:07:30,662 [13   ] etCore.Mvc.Internal.ObjectResultExecutor - Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+INFO  2018-05-06 12:07:30,663 [13   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action SPACore.PhoneBook.Roles.RoleAppService.Update (SPACore.PhoneBook.Application) in 285.7825ms
+INFO  2018-05-06 12:07:30,667 [13   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 302.2538ms 200 application/json; charset=utf-8
+INFO  2018-05-06 12:07:30,695 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 OPTIONS http://localhost:10747/api/services/app/Role/GetAll?SkipCount=0&MaxResultCount=10  
+INFO  2018-05-06 12:07:30,695 [6    ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-05-06 12:07:30,695 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 0.3742ms 204 
+INFO  2018-05-06 12:07:30,709 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:10747/api/services/app/Role/GetAll?SkipCount=0&MaxResultCount=10 application/json 
+INFO  2018-05-06 12:07:30,710 [10   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-05-06 12:07:30,710 [10   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2018-05-06 12:07:30,711 [10   ] uthentication.JwtBearer.JwtBearerHandler - AuthenticationScheme: JwtBearer was successfully authenticated.
+INFO  2018-05-06 12:07:30,725 [10   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-05-06 12:07:30,730 [10   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method SPACore.PhoneBook.Roles.RoleAppService.GetAll (SPACore.PhoneBook.Application) with arguments (Abp.Application.Services.Dto.PagedResultRequestDto) - ModelState is Valid
+INFO  2018-05-06 12:07:30,883 [13   ] etCore.Mvc.Internal.ObjectResultExecutor - Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+INFO  2018-05-06 12:07:30,887 [13   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action SPACore.PhoneBook.Roles.RoleAppService.GetAll (SPACore.PhoneBook.Application) in 162.6189ms
+INFO  2018-05-06 12:07:30,888 [13   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 178.0544ms 200 application/json; charset=utf-8
+DEBUG 2018-05-06 12:07:32,392 [12   ] Abp.AspNetCore.SignalR.Hubs.AbpCommonHub - A client is disconnected: 6d610801-9109-46ce-9ed7-f1a16151ee4b
+INFO  2018-05-06 12:07:32,411 [11   ] .Internal.Transports.WebSocketsTransport - Socket closed.
+INFO  2018-05-06 12:07:32,415 [14   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 13521.1572ms 101 
+INFO  2018-05-06 12:07:34,218 [25   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 OPTIONS http://localhost:10747/AbpUserConfiguration/GetAll  
+INFO  2018-05-06 12:07:34,218 [25   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-05-06 12:07:34,218 [25   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 0.3901ms 204 
+INFO  2018-05-06 12:07:34,270 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:10747/AbpUserConfiguration/GetAll application/json 
+INFO  2018-05-06 12:07:34,270 [11   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-05-06 12:07:34,271 [11   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2018-05-06 12:07:34,271 [11   ] uthentication.JwtBearer.JwtBearerHandler - AuthenticationScheme: JwtBearer was successfully authenticated.
+INFO  2018-05-06 12:07:34,281 [11   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-05-06 12:07:34,285 [11   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Abp.AspNetCore.Mvc.Controllers.AbpUserConfigurationController.GetAll (Abp.AspNetCore) with arguments ((null)) - ModelState is Valid
+INFO  2018-05-06 12:07:34,632 [11   ] matters.Json.Internal.JsonResultExecutor - Executing JsonResult, writing value Abp.Web.Models.AjaxResponse.
+INFO  2018-05-06 12:07:34,723 [11   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Abp.AspNetCore.Mvc.Controllers.AbpUserConfigurationController.GetAll (Abp.AspNetCore) in 441.6642ms
+INFO  2018-05-06 12:07:34,723 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 453.1482ms 200 application/json; charset=utf-8
+INFO  2018-05-06 12:07:34,747 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 OPTIONS http://localhost:10747/api/services/app/Session/GetCurrentLoginInformations  
+INFO  2018-05-06 12:07:34,748 [12   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-05-06 12:07:34,748 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 0.496ms 204 
+INFO  2018-05-06 12:07:34,764 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:10747/api/services/app/Session/GetCurrentLoginInformations application/json 
+INFO  2018-05-06 12:07:34,765 [10   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-05-06 12:07:34,766 [10   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2018-05-06 12:07:34,766 [10   ] uthentication.JwtBearer.JwtBearerHandler - AuthenticationScheme: JwtBearer was successfully authenticated.
+INFO  2018-05-06 12:07:34,781 [10   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-05-06 12:07:34,930 [10   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method SPACore.PhoneBook.Sessions.SessionAppService.GetCurrentLoginInformations (SPACore.PhoneBook.Application) with arguments ((null)) - ModelState is Valid
+INFO  2018-05-06 12:07:34,976 [6    ] etCore.Mvc.Internal.ObjectResultExecutor - Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+INFO  2018-05-06 12:07:34,983 [6    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action SPACore.PhoneBook.Sessions.SessionAppService.GetCurrentLoginInformations (SPACore.PhoneBook.Application) in 202.0166ms
+INFO  2018-05-06 12:07:34,984 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 219.4528ms 200 application/json; charset=utf-8
+INFO  2018-05-06 12:07:36,217 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 OPTIONS http://localhost:10747/api/services/app/Role/GetAll?SkipCount=0&MaxResultCount=10  
+INFO  2018-05-06 12:07:36,217 [10   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-05-06 12:07:36,217 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 0.7628ms 204 
+INFO  2018-05-06 12:07:36,224 [25   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 OPTIONS http://localhost:10747/api/services/app/Role/GetAllPermissions  
+INFO  2018-05-06 12:07:36,225 [25   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-05-06 12:07:36,225 [25   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 0.8528ms 204 
+INFO  2018-05-06 12:07:36,230 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 OPTIONS http://localhost:10747/api/services/app/Role/GetAllPermissions  
+INFO  2018-05-06 12:07:36,230 [6    ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-05-06 12:07:36,231 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 0.5263ms 204 
+INFO  2018-05-06 12:07:36,346 [15   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:10747/signalr?enc_auth_token=wNYmO41%2F48SHNstaLVXxHCCre29BZQl1NhC6NM3R3rzpXtPQxVzH6jEzA%2FQhXFN5tu6Fk7pO53uppm1mVXMZgxbyRVz26dnepi%2FFyB6axBY%2B6gq1GL%2BuRQgoiFUCjRN2p8w6LevViwKlHyWZZJZO1DGVSjAi1m2U%2Bog9pkHw9%2FRkp3UZ8A1gKoReYXpvXHc0KFXzGY3aUxaXUOjpNPSTn4LyfFvWqGRq42yefBXGrkBTbBN3h9UXPP%2B25Rfae1rBCQrd8mQ0G3JHpGlVZBMKMD5RSIjWMCe3sPKe05J4ZS4x7ipM9FJHtoJ0Ev%2FfvM08rDbeioKKXNqOF9YqzdChxSnpsH4gsiia6e%2BSRx0RP0vRVsR4wlyxfhLUPp9jvbWpdq%2FmZ48Smdg8IFkLdTqUWh8NEppdCs%2Ft4ytuxfJIgxcwBHvHIbIixFbcBEqeMLd6lGPcJNOqa2P7BOldl8D%2BsVfmOkQILNgpUEePQ8h3IenYCQh47tV%2FCXXN0yRovUhNHu79n%2FFAQOkQeS3Ra74PzlyX6its%2FjOyGEhXyYdi3CGityfrzKXNYqGHQo5BBVwM0RjCFWcybsi4WfwdCySz5ANaWWcPpHGUzDgr88D5IiivELkO1dBfy59f5uvTdLNu3FAlKEXSpYaWZCPBxydTCqQ36cCCEup26603InjW1oPEX5ccrhZnb%2BDMLqNOXYHnorcE6tLFRID%2FxL2ZU80oNE0w2nFTOAgbA46iOEpqJuwO%2BhvoWoCi9PLxIASBwzcrrfk2tnHWBm3UEH1AhGs82wyl9vVZ1Azata7fexMOjuZu7soB8Ic8ltySdQBumJ7wy46qnzZbstRZgVl9k5Kuha1qDTDYuUxuOGp%2F%2FP6bY3ZooQP9FRD774UDEGbg6oJzh3n%2Fs%2FGMe3yyFNaeLSWK1%2F%2FKMCinOCNbffzA3%2BMBoSiifg1FBYBkza%2BZAObCzjvDjOWfquzzK8FgaxCkEP%2BVsyStcWOA%2BXAPi8asDGOghKsbhFXpgiGrR4u%2Bp32Xf5%2FH  
+INFO  2018-05-06 12:07:36,347 [15   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-05-06 12:07:36,351 [15   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2018-05-06 12:07:36,351 [15   ] uthentication.JwtBearer.JwtBearerHandler - AuthenticationScheme: JwtBearer was successfully authenticated.
+INFO  2018-05-06 12:07:36,353 [15   ] .Internal.Transports.WebSocketsTransport - Socket opened.
+INFO  2018-05-06 12:07:36,367 [25   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:10747/api/services/app/Role/GetAllPermissions application/json 
+INFO  2018-05-06 12:07:36,367 [13   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:10747/api/services/app/Role/GetAll?SkipCount=0&MaxResultCount=10 application/json 
+INFO  2018-05-06 12:07:36,367 [25   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-05-06 12:07:36,367 [13   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-05-06 12:07:36,368 [25   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2018-05-06 12:07:36,370 [25   ] uthentication.JwtBearer.JwtBearerHandler - AuthenticationScheme: JwtBearer was successfully authenticated.
+INFO  2018-05-06 12:07:36,372 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:10747/api/services/app/Role/GetAllPermissions application/json 
+INFO  2018-05-06 12:07:36,372 [6    ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-05-06 12:07:36,374 [6    ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2018-05-06 12:07:36,374 [6    ] uthentication.JwtBearer.JwtBearerHandler - AuthenticationScheme: JwtBearer was successfully authenticated.
+INFO  2018-05-06 12:07:36,368 [13   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2018-05-06 12:07:36,380 [13   ] uthentication.JwtBearer.JwtBearerHandler - AuthenticationScheme: JwtBearer was successfully authenticated.
+INFO  2018-05-06 12:07:36,386 [13   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-05-06 12:07:36,386 [6    ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-05-06 12:07:36,387 [25   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-05-06 12:07:36,388 [13   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method SPACore.PhoneBook.Roles.RoleAppService.GetAll (SPACore.PhoneBook.Application) with arguments (Abp.Application.Services.Dto.PagedResultRequestDto) - ModelState is Valid
+INFO  2018-05-06 12:07:36,392 [6    ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method SPACore.PhoneBook.Roles.RoleAppService.GetAllPermissions (SPACore.PhoneBook.Application) with arguments ((null)) - ModelState is Valid
+INFO  2018-05-06 12:07:36,392 [10   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method SPACore.PhoneBook.Roles.RoleAppService.GetAllPermissions (SPACore.PhoneBook.Application) with arguments ((null)) - ModelState is Valid
+WARN  2018-05-06 12:07:36,416 [6    ] naries.DictionaryBasedLocalizationSource - Can not find 'Pages' in localization source 'PhoneBook'!
+WARN  2018-05-06 12:07:36,416 [10   ] naries.DictionaryBasedLocalizationSource - Can not find 'Pages' in localization source 'PhoneBook'!
+WARN  2018-05-06 12:07:36,419 [10   ] naries.DictionaryBasedLocalizationSource - Can not find 'Person' in localization source 'PhoneBook'!
+WARN  2018-05-06 12:07:36,419 [6    ] naries.DictionaryBasedLocalizationSource - Can not find 'Person' in localization source 'PhoneBook'!
+WARN  2018-05-06 12:07:36,420 [6    ] naries.DictionaryBasedLocalizationSource - Can not find 'CreatePerson' in localization source 'PhoneBook'!
+WARN  2018-05-06 12:07:36,420 [10   ] naries.DictionaryBasedLocalizationSource - Can not find 'CreatePerson' in localization source 'PhoneBook'!
+INFO  2018-05-06 12:07:36,422 [14   ] etCore.Mvc.Internal.ObjectResultExecutor - Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+WARN  2018-05-06 12:07:36,422 [6    ] naries.DictionaryBasedLocalizationSource - Can not find 'EditPerson' in localization source 'PhoneBook'!
+WARN  2018-05-06 12:07:36,422 [10   ] naries.DictionaryBasedLocalizationSource - Can not find 'EditPerson' in localization source 'PhoneBook'!
+INFO  2018-05-06 12:07:36,422 [14   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action SPACore.PhoneBook.Roles.RoleAppService.GetAll (SPACore.PhoneBook.Application) in 36.0656ms
+INFO  2018-05-06 12:07:36,423 [14   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 55.7143ms 200 application/json; charset=utf-8
+WARN  2018-05-06 12:07:36,423 [6    ] naries.DictionaryBasedLocalizationSource - Can not find 'DeletePerson' in localization source 'PhoneBook'!
+WARN  2018-05-06 12:07:36,423 [10   ] naries.DictionaryBasedLocalizationSource - Can not find 'DeletePerson' in localization source 'PhoneBook'!
+WARN  2018-05-06 12:07:36,423 [6    ] naries.DictionaryBasedLocalizationSource - Can not find 'BatchDeletePersons' in localization source 'PhoneBook'!
+INFO  2018-05-06 12:07:36,424 [15   ] .AspNetCore.SignalR.HubConnectionContext - Using HubProtocol 'json'.
+WARN  2018-05-06 12:07:36,424 [10   ] naries.DictionaryBasedLocalizationSource - Can not find 'BatchDeletePersons' in localization source 'PhoneBook'!
+DEBUG 2018-05-06 12:07:36,424 [15   ] Abp.AspNetCore.SignalR.Hubs.AbpCommonHub - A client is connected: {"ConnectionId":"19a284e6-8f28-46f4-8201-d39d0a29d18e","IpAddress":"::1","TenantId":1,"UserId":2,"ConnectTime":"2018-05-06T12:07:36.4246733+08:00","Properties":{}}
+INFO  2018-05-06 12:07:36,430 [25   ] etCore.Mvc.Internal.ObjectResultExecutor - Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+INFO  2018-05-06 12:07:36,430 [6    ] etCore.Mvc.Internal.ObjectResultExecutor - Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+INFO  2018-05-06 12:07:36,435 [6    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action SPACore.PhoneBook.Roles.RoleAppService.GetAllPermissions (SPACore.PhoneBook.Application) in 48.7514ms
+INFO  2018-05-06 12:07:36,435 [25   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action SPACore.PhoneBook.Roles.RoleAppService.GetAllPermissions (SPACore.PhoneBook.Application) in 48.5381ms
+INFO  2018-05-06 12:07:36,436 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 64.0343ms 200 application/json; charset=utf-8
+INFO  2018-05-06 12:07:36,436 [25   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 68.7271ms 200 application/json; charset=utf-8
+DEBUG 2018-05-06 12:07:36,506 [15   ] Abp.AspNetCore.SignalR.Hubs.AbpCommonHub - A client is registered: 19a284e6-8f28-46f4-8201-d39d0a29d18e
+INFO  2018-05-06 12:07:39,989 [25   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 OPTIONS http://localhost:10747/api/services/app/Role/Get?Id=3  
+INFO  2018-05-06 12:07:39,989 [25   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-05-06 12:07:39,989 [25   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 0.4914ms 204 
+INFO  2018-05-06 12:07:40,002 [15   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:10747/api/services/app/Role/Get?Id=3 application/json 
+INFO  2018-05-06 12:07:40,003 [15   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-05-06 12:07:40,003 [15   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2018-05-06 12:07:40,004 [15   ] uthentication.JwtBearer.JwtBearerHandler - AuthenticationScheme: JwtBearer was successfully authenticated.
+INFO  2018-05-06 12:07:40,011 [15   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-05-06 12:07:40,015 [15   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method SPACore.PhoneBook.Roles.RoleAppService.Get (SPACore.PhoneBook.Application) with arguments (Abp.Application.Services.Dto.EntityDto`1[System.Int32]) - ModelState is Valid
+INFO  2018-05-06 12:07:40,041 [10   ] etCore.Mvc.Internal.ObjectResultExecutor - Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+INFO  2018-05-06 12:07:40,041 [10   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action SPACore.PhoneBook.Roles.RoleAppService.Get (SPACore.PhoneBook.Application) in 30.2357ms
+INFO  2018-05-06 12:07:40,042 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 39.0764ms 200 application/json; charset=utf-8
+INFO  2018-05-06 12:07:42,433 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 OPTIONS http://localhost:10747/api/services/app/Role/Update  
+INFO  2018-05-06 12:07:42,433 [6    ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-05-06 12:07:42,433 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 0.5351ms 204 
+INFO  2018-05-06 12:07:42,445 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 PUT http://localhost:10747/api/services/app/Role/Update application/json 320
+INFO  2018-05-06 12:07:42,445 [10   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-05-06 12:07:42,446 [10   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2018-05-06 12:07:42,446 [10   ] uthentication.JwtBearer.JwtBearerHandler - AuthenticationScheme: JwtBearer was successfully authenticated.
+INFO  2018-05-06 12:07:42,451 [10   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-05-06 12:07:42,457 [13   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method SPACore.PhoneBook.Roles.RoleAppService.Update (SPACore.PhoneBook.Application) with arguments (SPACore.PhoneBook.Roles.Dto.RoleDto) - ModelState is Valid
+INFO  2018-05-06 12:07:42,546 [11   ] etCore.Mvc.Internal.ObjectResultExecutor - Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+INFO  2018-05-06 12:07:42,546 [11   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action SPACore.PhoneBook.Roles.RoleAppService.Update (SPACore.PhoneBook.Application) in 95.2606ms
+INFO  2018-05-06 12:07:42,547 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 101.911ms 200 application/json; charset=utf-8
+INFO  2018-05-06 12:07:42,571 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 OPTIONS http://localhost:10747/api/services/app/Role/GetAll?SkipCount=0&MaxResultCount=10  
+INFO  2018-05-06 12:07:42,571 [10   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-05-06 12:07:42,571 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 0.3824ms 204 
+INFO  2018-05-06 12:07:42,589 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:10747/api/services/app/Role/GetAll?SkipCount=0&MaxResultCount=10 application/json 
+INFO  2018-05-06 12:07:42,590 [6    ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-05-06 12:07:42,590 [6    ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2018-05-06 12:07:42,591 [6    ] uthentication.JwtBearer.JwtBearerHandler - AuthenticationScheme: JwtBearer was successfully authenticated.
+INFO  2018-05-06 12:07:42,598 [6    ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-05-06 12:07:42,601 [6    ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method SPACore.PhoneBook.Roles.RoleAppService.GetAll (SPACore.PhoneBook.Application) with arguments (Abp.Application.Services.Dto.PagedResultRequestDto) - ModelState is Valid
+INFO  2018-05-06 12:07:42,628 [11   ] etCore.Mvc.Internal.ObjectResultExecutor - Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+INFO  2018-05-06 12:07:42,629 [11   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action SPACore.PhoneBook.Roles.RoleAppService.GetAll (SPACore.PhoneBook.Application) in 30.7215ms
+INFO  2018-05-06 12:07:42,629 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 39.7411ms 200 application/json; charset=utf-8
