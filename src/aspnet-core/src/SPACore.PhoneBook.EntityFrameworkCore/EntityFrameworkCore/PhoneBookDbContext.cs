@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Abp.Localization;
+using Microsoft.EntityFrameworkCore;
 using Abp.Zero.EntityFrameworkCore;
 using SPACore.PhoneBook.Authorization.Roles;
 using SPACore.PhoneBook.Authorization.Users;
@@ -21,5 +22,16 @@ namespace SPACore.PhoneBook.EntityFrameworkCore
 
 
         public  DbSet<PhoneNumber> PhoneNumbers { get; set; }
+
+        //Initial_Migrations
+
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<ApplicationLanguageText>().Property(p => p.Value).HasMaxLength(500);
+
+
+            base.OnModelCreating(modelBuilder);
+        }
     }
 }

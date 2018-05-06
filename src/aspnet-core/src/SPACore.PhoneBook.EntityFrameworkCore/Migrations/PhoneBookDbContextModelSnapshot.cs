@@ -23,8 +23,8 @@ namespace SPACore.PhoneBook.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "2.0.1-rtm-125")
-                .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.SerialColumn)
+                .HasAnnotation("ProductVersion", "2.0.2-rtm-10011");
 
             modelBuilder.Entity("Abp.Application.Editions.Edition", b =>
                 {
@@ -647,7 +647,7 @@ namespace SPACore.PhoneBook.Migrations
 
                     b.Property<string>("Value")
                         .IsRequired()
-                        .HasMaxLength(67108864);
+                        .HasMaxLength(500);
 
                     b.HasKey("Id");
 
