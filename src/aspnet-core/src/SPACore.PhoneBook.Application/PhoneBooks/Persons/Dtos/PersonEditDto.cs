@@ -1,8 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
-using SPACore.PhoneBook.Persons.Dtos.LTMAutoMapper;
-using SPACore.PhoneBook.PhoneBooks.Persons;
 
-namespace SPACore.PhoneBook.Persons.Dtos
+namespace SPACore.PhoneBook.PhoneBooks.Persons.Dtos
 {
     public class PersonEditDto
     {

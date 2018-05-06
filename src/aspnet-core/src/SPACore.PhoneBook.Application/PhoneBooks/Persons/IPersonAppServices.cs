@@ -2,10 +2,10 @@
 using System.Threading.Tasks;
 using Abp.Application.Services;
 using Abp.Application.Services.Dto;
-using SPACore.PhoneBook.Persons.Dtos;
-using SPACore.PhoneBook.PhoneBooks.Persons;
+using SPACore.PhoneBook.PhoneBooks.Persons.Dtos;
+using SPACore.PhoneBook.PhoneBooks.PhoneNumbers.Dtos;
 
-namespace SPACore.PhoneBook.Persons
+namespace SPACore.PhoneBook.PhoneBooks.Persons
 {
     /// <summary>
     /// Person应用层服务的接口方法
@@ -55,5 +55,19 @@ namespace SPACore.PhoneBook.Persons
         /// 批量删除Person
         /// </summary>
         Task BatchDeletePersonsAsync(List<int> input);
+
+
+
+        #region 电话薄功能
+
+        Task<PhoneNumberListDto> AddPhoneNumberAsync(PhoneNumberEditDto input);
+
+
+        Task DeletePhoneNumberAsync(EntityDto<long> input);
+
+
+
+        #endregion
+
     }
 }

@@ -1,8 +1,4 @@
-﻿using System.Collections.Generic;
-using Abp.Application.Services.Dto;
-using SPACore.PhoneBook.PhoneBooks.Persons;
-
-namespace SPACore.PhoneBook.Persons.Dtos
+﻿namespace SPACore.PhoneBook.PhoneBooks.Persons.Dtos
 {
     public class GetPersonForEditOutput
 {

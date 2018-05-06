@@ -1,8 +1,6 @@
-﻿using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using SPACore.PhoneBook.PhoneBooks.Persons;
+﻿using System.ComponentModel.DataAnnotations;
 
-namespace SPACore.PhoneBook.Persons.Dtos
+namespace SPACore.PhoneBook.PhoneBooks.Persons.Dtos
 {
     public class CreateOrUpdatePersonInput
 {

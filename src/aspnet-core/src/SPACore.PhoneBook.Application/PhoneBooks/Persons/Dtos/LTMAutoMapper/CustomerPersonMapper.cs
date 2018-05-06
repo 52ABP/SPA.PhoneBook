@@ -1,9 +1,9 @@
 ﻿using AutoMapper;
+using SPACore.PhoneBook.PhoneBooks.PhoneNumbers;
+using SPACore.PhoneBook.PhoneBooks.PhoneNumbers.Dtos;
 
-namespace SPACore.PhoneBook.Persons.Dtos.LTMAutoMapper
+namespace SPACore.PhoneBook.PhoneBooks.Persons.Dtos.LTMAutoMapper
 {
-    using SPACore.PhoneBook.PhoneBooks.Persons;
-
     /// <summary>
     /// 配置Person的AutoMapper
     /// </summary>
@@ -16,6 +16,10 @@ namespace SPACore.PhoneBook.Persons.Dtos.LTMAutoMapper
             configuration.CreateMap<PersonEditDto, Person>();
             // configuration.CreateMap<CreatePersonInput, Person>();
             //        configuration.CreateMap<Person, GetPersonForEditOutput>();
+
+
+            configuration.CreateMap<PhoneNumber, PhoneNumberListDto>();
+            configuration.CreateMap<PhoneNumberEditDto, PhoneNumber>();
         }
     }
 }

@@ -1,9 +1,6 @@
-﻿using System;
-using Abp.Application.Services.Dto;
-using SPACore.PhoneBook.Persons.Dtos.LTMAutoMapper;
-using SPACore.PhoneBook.PhoneBooks.Persons;
+﻿using Abp.Application.Services.Dto;
 
-namespace SPACore.PhoneBook.Persons.Dtos
+namespace SPACore.PhoneBook.PhoneBooks.Persons.Dtos
 {
     public class PersonListDto : FullAuditedEntityDto
     {
