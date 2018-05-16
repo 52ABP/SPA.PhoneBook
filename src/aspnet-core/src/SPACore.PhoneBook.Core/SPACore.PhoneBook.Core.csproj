@@ -15,10 +15,10 @@
     <EmbeddedResource Include="Localization\SourceFiles\*.xml" Exclude="bin\**;obj\**;**\*.xproj;packages\**;@(EmbeddedResource)" />
   </ItemGroup>
   <ItemGroup>
-    <None Remove="Persons\ReadME.md" />
+    <None Remove="PhoneBooks\Persons\ReadME.md" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Persons\ReadME.md" />
+    <Compile Include="PhoneBooks\Persons\ReadME.md" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Abp.AutoMapper" Version="3.5.0" />
